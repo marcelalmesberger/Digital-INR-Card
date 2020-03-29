@@ -1,0 +1,25 @@
+{
+  "name": "masterthesis-inr-application",
+  "version": "1.0.0",
+  "description": "application for managing International Normalized Ratio data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcelalmesberger/Masterthesis-INR-Application.git"
+  },
+  "keywords": [
+    "INR"
+  ],
+  "author": "Almesberger Marcel",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/marcelalmesberger/Masterthesis-INR-Application/issues"
+  },
+  "homepage": "https://github.com/marcelalmesberger/Masterthesis-INR-Application#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
