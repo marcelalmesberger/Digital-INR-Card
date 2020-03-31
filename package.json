@@ -4,7 +4,7 @@
   "description": "application for managing International Normalized Ratio data",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "css-build": "node-sass --omit-source-map-url public/styles/scss/style.scss public/styles/css/style.css"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,9 @@
   "homepage": "https://github.com/marcelalmesberger/Masterthesis-INR-Application#readme",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "bulma": "^0.8.1",
+    "node-sass": "^4.13.1"
   }
 }
