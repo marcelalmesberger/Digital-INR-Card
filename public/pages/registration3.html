@@ -14,11 +14,25 @@
             <p>App Name</p>
         </header>
         <main>
-
+            <h1>Registrierung</h1>
+            <form method="POST" action="">
+                <label>Medikament:</label>
+                <select name="" required>
+                    <option value="">Acenocoumarol</option>
+                    <option value="">Phenprocoumon</option>
+                </select>
+                <label>INR-Zielwert:</label>
+                <input type="number" required>
+                <label>INR-Zielbereich:</label>
+                <p>
+                    von <input type="number" required>
+                    bis <input type="number" required>
+                </p>
+            </form>
         </main>
         <footer>
             <p>Copyright 2020 Almesberger Marcel</p>
         </footer>
-        <script src="scripts/script.js"></script>
+        <script src="../scripts/script.js"></script>
     </body>
 </html>
