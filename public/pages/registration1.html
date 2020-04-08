@@ -16,13 +16,17 @@
         <main>
             <h1>Registrierung</h1>
             <form method="POST" action="">
-                <label>Email:</label>
-                <input type="email" required>
-                <label>Passwort:</label>
-                <input type="password" required>
-                <label>Bestätigung Passwort:</label>
-                <input type="password" required>
+                <label for="regemail">Email:</label>
+                <input type="email" id="regemail" name="regemail" required>
+                <label for="regpwd">Passwort:</label>
+                <input type="password" id="regpwd" name="regpwd" required>
+                <label for="checkpwd">Bestätigung Passwort:</label>
+                <input type="password" id="checkpwd" name="checkpwd" required>
             </form>
+            <p>
+                <a href="index.html">Zurück</a>
+                <a href="registration2.html">Weiter</a>
+            </p>
         </main>
         <footer>
             <p>Copyright 2020 Almesberger Marcel</p>
