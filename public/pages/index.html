@@ -15,15 +15,17 @@
         </header>
         <main>
             <h1>App Name</h1>
-            <form method="POST" action="">
+            <form method="POST" action="/submit" id="loginform">
                 <label for="loginmail">Email:</label>
                 <input type="email" id="loginmail" name="loginmail" required>
                 <label for="loginpwd">Passwort:</label>
                 <input type="password" id="loginpwd" name="loginpwd" required>
             </form>
             <p>
-                <a href="overview.html">Anmelden</a>
-                <a href="registration1.html">Registrieren</a>
+                <button type="submit" form="loginform" value="anmelden">Anmelden</button>
+            </p>
+            <p>
+                <a href="/public/pages/registration1.html">Registrieren</a>
             </p>
         </main>
         <footer>

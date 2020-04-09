@@ -1,5 +1,6 @@
 // load required modules
 const express = require("express");
+const bodyParser = require("body-parser");
 
 // create express instance
 const app = express();
@@ -7,7 +8,10 @@ const app = express();
 // make puplic directory availabe
 app.use(express.static("public"));
 
-/* ROUTES */
+// use modules
+app.use(bodyParser.urlencoded({ extended: true }));
+
+/* ROUTES GET-REQUESTS*/
 
 // landing page
 app.get("/", (req, res) => {
@@ -61,7 +65,39 @@ app.get("/public/pages/settings.html", (req, res) => {
 
 // landing page after logout
 app.get("/public/pages/index.html", (req, res) => {
-    res.sendFile(__dirname + "/public/pages/index.html")
+    res.redirect("/");
+});
+
+/* POST-REQUESTS */
+
+// landing page
+app.post("/submit", (req, res) => {
+    console.log("Email: " + req.body.loginmail);
+    console.log("Passwort: " + req.body.loginpwd);
+    res.redirect("/public/pages/overview.html");
+});
+
+// registration first step
+app.post("/public/pages/registration1.html/submit", (req, res) => {
+    console.log("Email: " + req.body.regemail);
+    console.log("Passwort: " + req.body.regpwd);
+    console.log("Bestätigung Passwort: " + req.body.checkpwd);
+    res.redirect("/public/pages/registration2.html");
+});
+
+// registration second step
+app.post("/public/pages/registration2.html/submit", (req, res) => {
+    console.log("Nachname: " + req.body.surname);
+    console.log("Vorname: " + req.body.prename);
+    console.log("Geburtsdatum: " + req.body.birthdate);
+    res.redirect("/public/pages/registration3.html");
+});
+
+app.post("/public/pages/registration3.html/submit", (req, res) => {
+    console.log("Medikament: " + req.body.medication);
+    console.log("INR-Zielwert " + req.body.targetvalue);
+    console.log("INR-Zielbereich: von " + req.body.minrange + " bis " + req.body.maxrange);
+    res.redirect("/public/pages/overview.html");
 });
 
 // Server listening on port 3000, http://localhost:3000/

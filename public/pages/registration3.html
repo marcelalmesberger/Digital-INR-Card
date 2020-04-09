@@ -15,23 +15,29 @@
         </header>
         <main>
             <h1>Registrierung</h1>
-            <form method="POST" action="">
+            <form method="POST" action="/public/pages/registration3.html/submit" id="regform3">
                 <label for="medication">Medikament:</label>
                 <select id="medication" name="medication" required>
-                    <option value="acenocoumarol">Acenocoumarol</option>
-                    <option value="phenprocoumon">Phenprocoumon</option>
+                    <option value="Acenocoumarol">Acenocoumarol</option>
+                    <option value="Phenprocoumon">Phenprocoumon</option>
                 </select>
                 <label for="targetvalue">INR-Zielwert:</label>
                 <input type="number" id="targetvalue" name="targetvalue" required>
-                <label>INR-Zielbereich:</label>
+                <p>INR-Zielbereich:</p>
                 <p>
-                    von <input type="number" required>
-                    bis <input type="number" required>
+                    <label for="minrange">von</label>
+                    <input type="number" id="minrange" name="minrange" required>
+                    <label for="maxrange">bis</label> 
+                    <input type="number" id="maxrange" name="maxrange" required>
                 </p>
             </form>
             <p>
-                <a href="registration2.html">Zurück</a>
-                <a href="overview.html">Weiter</a>
+                <span>
+                    <a href="registration2.html">Zurück</a>
+                </span>
+                <span>
+                    <button type="submit" form="regform3" value="weiter">Weiter</button>
+                </span>
             </p>
         </main>
         <footer>

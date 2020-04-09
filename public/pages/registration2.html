@@ -15,7 +15,7 @@
         </header>
         <main>
             <h1>Registrierung</h1>
-            <form method="POST" action="">
+            <form method="POST" action="/public/pages/registration2.html/submit" id="regform2">
                 <label for="surname">Nachname:</label>
                 <input type="text" id="surname" name="surname" required>
                 <label for="prename">Vorname:</label>
@@ -24,8 +24,12 @@
                 <input type="date" id="birthdate" name="birthdate" required>
             </form>
             <p>
-                <a href="registration1.html">Zurück</a>
-                <a href="registration3.html">Weiter</a>
+                <span>
+                    <a href="registration1.html">Zurück</a>
+                </span>
+                <span>
+                    <button type="submit" form="regform2" value="weiter">Weiter</button>
+                </span>
             </p>
         </main>
         <footer>
