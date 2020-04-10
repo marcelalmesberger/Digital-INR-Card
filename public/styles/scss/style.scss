@@ -18,6 +18,7 @@ $primary: $my-blue-dark;
 // Typography
 $family-sans-serif: "Roboto", sans-serif;
 $body-font-size: 1.25rem;
+$text: $primary;
 
 // IMPORT OF BULMA COMPONENTS
 
@@ -28,3 +29,9 @@ $body-font-size: 1.25rem;
 // Bulma elements
 @import "../../../node_modules/bulma/sass/elements/box.sass";
 @import "../../../node_modules/bulma/sass/elements/button.sass";
+@import "../../../node_modules/bulma/sass/elements/icon.sass";
+@import "../../../node_modules/bulma/sass/elements/title.sass";
+
+
+// Bulma forms
+@import "../../../node_modules/bulma/sass/form/_all.sass";
