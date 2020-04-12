@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "bulma": "^0.8.1",
+    "bulma-o-steps": "^1.0.9",
     "node-sass": "^4.13.1"
   }
 }
