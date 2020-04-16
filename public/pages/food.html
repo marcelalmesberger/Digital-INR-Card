@@ -5,613 +5,642 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Lebensmittel</title>
         <!--Integration of stylesheet with Bulma-->
-        <link rel="stylesheet" href="/styles/css/style.css">
+        <link rel="stylesheet" href="../styles/css/style.css">
         <!--Integration of Fontawesome 5.13.0-->
         <script src="https://kit.fontawesome.com/4956754289.js" crossorigin="anonymous"></script>  
     </head>
-    <body>
-        <header>
+    <body class="has-background-primary">
+        <header class="has-background-primary has-text-white" style="padding: 1rem">
             <p>App Name</p>
         </header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="overview.html">
-                        <span class="icon">
-                            <i class="fas fa-home"></i>
-                        </span>
-                        Übersicht
-                    </a>
-                </li>
-                <li>
-                    <a href="myvalues.html">
-                        <span class="icon">
-                            <i class="fas fa-notes-medical"></i>
-                        </span>
-                        Meine Werte
-                    </a>
-                </li>
-                <li>
-                    <a href="importexport.html">
-                        <span class="icon">
-                            <i class="fas fa-file-import"></i>
-                        </span>
-                        Import & Export
-                    </a>
-                </li>
-                <li>
-                    <a href="food.html">
-                        <span class="icon">
-                            <i class="fas fa-carrot"></i>
-                        </span>
-                        Lebensmittel
-                    </a>
-                </li>
-                <li>
-                    <a href="interactions.html">
-                        <span class="icon">
-                            <i class="fas fa-pills"></i>
-                        </span>
-                        Wechselwirkungen
-                    </a>
-                </li>
-                <li>
-                    <a href="settings.html">
-                        <span class="icon">
-                            <i class="fas fa-cog"></i>
-                        </span>
-                        Einstellungen
-                    </a>
-                </li>
-                <li>
-                    <a href="index.html">
-                        <span class="icon">
-                            <i class="fas fa-power-off"></i>
-                        </span>
-                        Abmelden
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <main>
-            <article>
-                <h1>Lebensmittel</h1>
-                <p>Lebensmittel mit Vitamin K können die Wirkung Ihrer Blutverdünnung abschwächen!</p>
-            </article>
-            <article>
-                <h2>Hoher Vitamin K Gehalt</h2>
+        <div class="columns">
+            <nav class="column is-one-fifth has-background-primary">
                 <ul>
-                    <li>Blaukraut (Rothkohl)
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
+                    <li>
+                        <a href="overview.html" class="button is-primary is-fullwidth">
+                            <span class="icon">
+                                <i class="fas fa-home"></i>
+                            </span>
+                            <span>
+                                Übersicht
+                            </span>
+                        </a>
                     </li>
-                    <li>Bohnen (weiß)
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
+                    <li>
+                        <a href="myvalues.html" class="button is-primary is-fullwidth">
+                            <span class="icon">
+                                <i class="fas fa-notes-medical"></i>
+                            </span>
+                            <span>
+                                Meine Werte
+                            </span>
+                        </a>
                     </li>
-                    <li>Broccoli
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
+                    <li>
+                        <a href="importexport.html" class="button is-primary is-fullwidth">
+                            <span class="icon">
+                                <i class="fas fa-file-import"></i>
+                            </span>
+                            <span>
+                                Import & Export
+                            </span>
+                        </a>
                     </li>
-                    <li>Fenchel
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
+                    <li>
+                        <a href="food.html" class="button is-primary is-fullwidth">
+                            <span class="icon">
+                                <i class="fas fa-carrot"></i>
+                            </span>
+                            <span>
+                                Lebensmittel
+                            </span>
+                        </a>
                     </li>
-                    <li>Fisolen (Bohnen grün)
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
+                    <li>
+                        <a href="interactions.html" class="button is-primary is-fullwidth">
+                            <span class="icon">
+                                <i class="fas fa-pills"></i>
+                            </span>
+                            <span>
+                                Wechselwirkungen
+                            </span>
+                        </a>
                     </li>
-                    <li>Grünkohl (Braunkohl)
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
+                    <li>
+                        <a href="settings.html"class="button is-primary is-fullwidth">
+                            <span class="icon">
+                                <i class="fas fa-cog"></i>
+                            </span>
+                            <span>
+                                Einstellungen
+                            </span>
+                        </a>
                     </li>
-                    <li>Kichererbse
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Knoblauch
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Kohlsprossen
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Kresse
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Kürbiskerne (+ Öl)
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Lauch (Porree)
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Mangold
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Petersilie
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Rapsöl
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Salat (diverse)
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Schnittlauch
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Spinat
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Zwiebel
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
+                    <li>
+                        <a href="index.html" class="button is-primary is-fullwidth">
+                            <span class="icon">
+                                <i class="fas fa-power-off"></i>
+                            </span>
+                            <span>
+                                Abmelden
+                            </span>
+                        </a>
                     </li>
                 </ul>
-            </article>
-            <article>
-                <h2>Mittlerer Vitamin K Gehalt</h2>
-                <ul>
-                    <li>Artischocke
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Avocado
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Butter (+ Margarine)
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Cashewnuss
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Champignon
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Ei
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Erbse
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Grünkern
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Gurke
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Hafer
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Haselnuss
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Himbeere
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Honig
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Hühnerfleisch
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Johannisbeere
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Karotte (Möhre)
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Käse (diverse)
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Kiwi
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Mais
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Olive (+ Öl)
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Paprika
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Pistazie
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Radieschen
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Rhabarber
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Rindfleisch
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Sauerkraut
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Schlagobers (Sahne)
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Schweinefleisch
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Sellerie
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Spargel (grün, weiß)
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Topfen (Quark)
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Weintraube
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Weizenmehl
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Zucchini
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                </ul>
-            </article>
-            <article>
-                <h2>Niedriger Vitamin K Gehalt</h2>
-                <ul>
-                    <li>Ananas
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Apfel
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Aubergine
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Banane
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Birne
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Erdbeere
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Erdnuss
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Fisch (diverse)
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Joghurt
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Kaffee
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Kakao
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Kalbfleisch
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Kartoffel
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Kirsche
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Kohlrabi
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Kokosnuss (+ Öl)
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Leinsamen
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Mandarine
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Meeresfrüchte (diverse)
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Melone
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Milch
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Orange
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Palmöl
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Pfirsich
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Pflaume (Zwetschke)
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Rote Rübe
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Reis
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Rettich
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Roggenmehl
-                        <<span class="icon">
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Schaffleisch
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Senf
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Sesam (+ Öl)
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Sonnenblumenöl
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Tomate
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Walnuss (+ Öl)
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                    <li>Zitrone
-                        <span class="icon">
-                            <i class="fas fa-plus"></i>
-                        </span>
-                    </li>
-                </ul>
-            </article>
-        </main>
-        <footer>
+            </nav>
+            <main class="column has-background-white">
+                <article>
+                    <h1>Lebensmittel</h1>
+                    <p>Lebensmittel mit Vitamin K können die Wirkung Ihrer Blutverdünnung abschwächen!</p>
+                </article>
+                <article>
+                    <h2>Hoher Vitamin K Gehalt</h2>
+                    <div class="columns"></div>
+                    <ul>
+                        <li>
+                            <span>
+                                Blaukraut (Rothkohl)
+                            </span>
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                Bohnen (weiß)
+                            </span>
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                Broccoli
+                            </span>
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                Fenchel
+                            </span>
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Fisolen (Bohnen grün)
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Grünkohl (Braunkohl)
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Kichererbse
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Knoblauch
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Kohlsprossen
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Kresse
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Kürbiskerne (+ Öl)
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Lauch (Porree)
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Mangold
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Petersilie
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Rapsöl
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Salat (diverse)
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Schnittlauch
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Spinat
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Zwiebel
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                    </ul>
+                </article>
+                <article>
+                    <h2>Mittlerer Vitamin K Gehalt</h2>
+                    <ul>
+                        <li>Artischocke
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Avocado
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Butter (+ Margarine)
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Cashewnuss
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Champignon
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Ei
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Erbse
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Grünkern
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Gurke
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Hafer
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Haselnuss
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Himbeere
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Honig
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Hühnerfleisch
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Johannisbeere
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Karotte (Möhre)
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Käse (diverse)
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Kiwi
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Mais
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Olive (+ Öl)
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Paprika
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Pistazie
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Radieschen
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Rhabarber
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Rindfleisch
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Sauerkraut
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Schlagobers (Sahne)
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Schweinefleisch
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Sellerie
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Spargel (grün, weiß)
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Topfen (Quark)
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Weintraube
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Weizenmehl
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Zucchini
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                    </ul>
+                </article>
+                <article>
+                    <h2>Niedriger Vitamin K Gehalt</h2>
+                    <ul>
+                        <li>Ananas
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Apfel
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Aubergine
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Banane
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Birne
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Erdbeere
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Erdnuss
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Fisch (diverse)
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Joghurt
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Kaffee
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Kakao
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Kalbfleisch
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Kartoffel
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Kirsche
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Kohlrabi
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Kokosnuss (+ Öl)
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Leinsamen
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Mandarine
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Meeresfrüchte (diverse)
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Melone
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Milch
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Orange
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Palmöl
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Pfirsich
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Pflaume (Zwetschke)
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Rote Rübe
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Reis
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Rettich
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Roggenmehl
+                            <<span class="icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Schaffleisch
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Senf
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Sesam (+ Öl)
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Sonnenblumenöl
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Tomate
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Walnuss (+ Öl)
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                        <li>Zitrone
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </li>
+                    </ul>
+                </article>
+            </main>
+        </div>
+        <footer class="has-background-primary has-text-white">
             <p>Copyright 2020 Almesberger Marcel</p>
         </footer>
         <script src="/scripts/script.js"></script>
