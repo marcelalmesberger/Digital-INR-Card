@@ -33,18 +33,36 @@
                 </li>
             </ul>
             <form method="POST" action="/public/pages/registration1.html/submit" id="regform1">
-                <label for="regemail">
-                    Email:
-                </label>
-                <input type="email" id="regemail" name="regemail" required>
-                <label for="regpwd">
-                    Passwort:
-                </label>
-                <input type="password" id="regpwd" name="regpwd" required>
-                <label for="checkpwd">
-                    Bestätigung Passwort:
-                </label>
-                <input type="password" id="checkpwd" name="checkpwd" required>
+                <div class="field">
+                    <label for="regemail" class="label">Email*</label>
+                    <div class="control has-icon-left">
+                        <input type="email" id="regemail" name="regemail" placeholder="Email" class="input" required>
+                        <span class="icon is-left">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                    </div>
+                    <p class="help is-primary">* erforderlich</p>
+                </div>
+                <div class="field">
+                    <label for="regpwd" class="label">Passwort*</label>
+                    <div class="control has-icon-left">
+                        <input type="password" id="regpwd" name="regpwd" placeholder="Passwort" class="input" required>
+                        <span class="icon is-left">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                    </div>
+                    <p class="help is-primary">* erforderlich</p>
+                </div>
+                <div class="field">
+                    <label for="checkpwd" class="label">Bestätigung Passwort*</label>
+                    <div class="control has-icon-left">
+                        <input type="password" id="checkpwd" name="checkpwd" placeholder="Bestätigung Passwort" class="input" required>
+                        <span class="icon is-left">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                    </div>
+                    <p class="help is-primary">* erforderlich</p>
+                </div>
             </form>
             <p>
                 <span>
