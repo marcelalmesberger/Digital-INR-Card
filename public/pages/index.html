@@ -10,42 +10,58 @@
         <script src="https://kit.fontawesome.com/4956754289.js" crossorigin="anonymous"></script> 
     </head>
     <body>
-        <header>
-            <p>App Name</p>
+        <header class="hero is-primary is-small">
+            <div class="hero-body">
+                    <p class="is-size-5">App Name</p>
+            </div>
         </header>
         <main>
-            <h1 class="title">App Name</h1>
-            <form method="POST" action="/submit" id="loginform">
-                <div class="field">
-                    <label for="loginmail" class="label">Email*</label>
-                    <div class="control has-icons-left">
-                        <input type="email" id="loginmail" name="loginmail" placeholder="Email" class="input" required>
-                        <span class="icon is-left">
-                            <i class="fas fa-envelope"></i>
-                        </span>
+            <h1 class="is-size-2 has-text-primary has-text-centered has-text-weight-bold has-margin-top-30 has-margin-bottom-30">
+                App Name
+            </h1>
+            <div class="columns">
+                <div class="column is-one-third is-offset-one-third">
+                    <form method="POST" action="/submit" id="loginform" class="box">
+                        <div class="field">
+                            <label for="loginmail" class="label has-text-primary is-size-5">Email*</label>
+                            <div class="control has-icons-left">
+                                <input type="email" id="loginmail" name="loginmail" placeholder="Email" class="input is-medium" required>
+                                <span class="icon is-left">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                            </div>
+                            <p class="help has-text-primary is-size-6">* erforderlich</p>
+                        </div>
+                        <div class="field">
+                            <label for="loginpwd" class="label has-text-primary is-size-5">Passwort*</label>
+                            <div class="control has-icons-left">
+                                <input type="password" id="loginpwd" name="loginpwd" placeholder="Passwort" class="input is-medium" required>
+                                <span class="icon is-left">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                            </div>
+                            <p class="help has-text-primary is-size-6">* erforderlich</p>
+                        </div>
+                    </form>
+                    <div class="buttons">
+                        <button type="submit" form="loginform" value="anmelden"
+                        class="button is-link is-medium is-fullwidth" style="justify-content: center;">
+                            <span>Anmelden</span>
+                        </button>
                     </div>
-                    <p class="help is-primary">* erforderlich</p>
-                </div>
-                <div class="field">
-                    <label for="loginpwd" class="label">Passwort*</label>
-                    <div class="control has-icons-left">
-                        <input type="password" id="loginpwd" name="loginpwd" placeholder="Passwort" class="input" required>
-                        <span class="icon is-left">
-                            <i class="fas fa-lock"></i>
-                        </span>
+                    <div class="buttons">
+                        <a href="/public/pages/registration1.html" 
+                        class="button is-link is-medium is-outlined is-fullwidth has-margin-bottom-45" style="justify-content: center;">
+                            <span>Registrieren</span>
+                        </a>
                     </div>
-                    <p class="help is-primary">* erforderlich</p>
                 </div>
-            </form>
-            <p>
-                <button type="submit" form="loginform" value="anmelden" class="button is-link">Anmelden</button>
-            </p>
-            <p>
-                <a href="/public/pages/registration1.html" class="button is-link is-outlined">Registrieren</a>
-            </p>
+            </div>
         </main>
-        <footer>
-            <p>Copyright 2020 Almesberger Marcel</p>
+        <footer class="footer is-primary has-text-white">
+            <div class="content has-text-centered">
+                <p class="is-size-5">Copyright 2020 Almesberger Marcel</p>
+            </div>
         </footer>
         <script src="/scripts/script.js"></script>
     </body>
