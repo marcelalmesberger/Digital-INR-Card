@@ -16,57 +16,63 @@
             </div>
         </header>
         <main>
-            <h1>Registrierung</h1>
-            <ul class="steps is-horizontal is-hollow">
-                <li class="steps-segment">
-                    <span class="steps-marker">
-                        <span class="icon">
-                            <i class="fas fa-check"></i>
-                        </span>
-                    </span>
-                </li>
-                <li class="steps-segment">
-                    <span class="steps-marker">
-                        2
-                    </span>
-                </li>
-                <li class="steps-segment">
-                    <span class="steps-marker">
-                        3
-                    </span>
-                </li>
-            </ul>
-            <form method="POST" action="/public/pages/registration2.html/submit" id="regform2">
-                <div class="field">
-                    <label for="surname" class="label">Nachname*</label>
-                    <div class="control">
-                        <input type="text" id="surname" name="surname" placeholder="Nachname" class="input" required>
+            <h1 class="is-size-2 has-text-primary has-text-centered has-text-weight-bold has-margin-top-30 has-margin-bottom-30">
+                Registrierung
+            </h1>
+            <div class="columns">
+                <div class="column is-one-third is-offset-one-third">
+                    <ul class="steps is-horizontal is-large has-margin-top-30 has-margin-bottom-30">
+                        <li class="steps-segment">
+                            <span class="steps-marker">
+                                <span class="icon">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                            </span>
+                        </li>
+                        <li class="steps-segment">
+                            <span class="steps-marker">
+                                2
+                            </span>
+                        </li>
+                        <li class="steps-segment">
+                            <span class="steps-marker">
+                                3
+                            </span>
+                        </li>
+                    </ul>
+                    <form method="POST" action="/public/pages/registration2.html/submit" id="regform2" class="box">
+                        <div class="field">
+                            <label for="surname" class="label has-text-primary is-size-5">Nachname*</label>
+                            <div class="control">
+                                <input type="text" id="surname" name="surname" placeholder="Nachname" class="input is-medium" required>
+                            </div>
+                            <p class="help has-text-primary is-size-6">* erforderlich</p>
+                        </div>
+                        <div class="field">
+                            <label for="prename" class="label has-text-primary is-size-5">Vorname*</label>
+                            <div class="control">
+                                <input type="text" id="prename" name="prename" placeholder="Vorname" class="input is-medium" required>
+                            </div>
+                            <p class="help has-text-primary is-size-6">* erforderlich</p>
+                        </div>
+                        <div class="field">
+                            <label for="birthdate" class="label has-text-primary is-size-5">Geburtsdatum*</label>
+                            <div class="control">
+                                <input type="date" id="birthdate" name="birthdate" placeholder="tt.mm.yyyy" class="input is-medium" required>
+                            </div>
+                            <p class="help has-text-primary is-size-6">* erforderlich</p>
+                        </div>
+                    </form>
+                    <div class="level is-mobile has-margin-bottom-45">
+                        <div class="level-left">
+                            <a href="registration1.html" class="button is-link is-outlined is-medium">Zurück</a>
+                        </div>
+                        <div class="level-right">
+                            <button type="submit" form="regform2" value="weiter" class="button is-link is-medium">Weiter</button>
+                        </div>
                     </div>
-                    <p class="help is-primary">* erforderlich</p>
                 </div>
-                <div class="field">
-                    <label for="prename" class="label">Vorname*</label>
-                    <div class="control">
-                        <input type="text" id="prename" name="prename" placeholder="Vorname" class="input" required>
-                    </div>
-                    <p class="help is-primary">* erforderlich</p>
-                </div>
-                <div class="field">
-                    <label for="birthdate" class="label">Geburtsdatum*</label>
-                    <div class="control">
-                        <input type="date" id="birthdate" name="birthdate" placeholder="tt.mm.yyyy" class="input" required>
-                    </div>
-                    
-                </div>
-            </form>
-            <p>
-                <span>
-                    <a href="registration1.html" class="button is-link is-outlined">Zurück</a>
-                </span>
-                <span>
-                    <button type="submit" form="regform2" value="weiter" class="button is-link">Weiter</button>
-                </span>
-            </p>
+            </div>
         </main>
         <footer class="footer is-primary has-text-white">
             <div class="content has-text-centered">
