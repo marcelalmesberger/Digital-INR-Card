@@ -9,105 +9,117 @@
         <!--Integration of Fontawesome 5.13.0-->
         <script src="https://kit.fontawesome.com/4956754289.js" crossorigin="anonymous"></script>
     </head>
-    <body>
+    <body class="has-background-primary">
         <header class="hero is-primary is-small">
             <div class="hero-body">
                     <p class="is-size-5">App Name</p>
             </div>
         </header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="overview.html">
-                        <span class="icon">
-                            <i class="fas fa-home"></i>
-                        </span>
-                        Übersicht
-                    </a>
-                </li>
-                <li>
-                    <a href="myvalues.html">
-                        <span class="icon">
-                            <i class="fas fa-notes-medical"></i>
-                        </span>
-                        Meine Werte
-                    </a>
-                </li>
-                <li>
-                    <a href="importexport.html">
-                        <span class="icon">
-                            <i class="fas fa-file-import"></i>
-                        </span>
-                        Import & Export
-                    </a>
-                </li>
-                <li>
-                    <a href="food.html">
-                        <span class="icon">
-                            <i class="fas fa-carrot"></i>
-                        </span>
-                        Lebensmittel
-                    </a>
-                </li>
-                <li>
-                    <a href="interactions.html">
-                        <span class="icon">
-                            <i class="fas fa-pills"></i>
-                        </span>
-                        Wechselwirkungen
-                    </a>
-                </li>
-                <li>
-                    <a href="settings.html">
-                        <span class="icon">
-                            <i class="fas fa-cog"></i>
-                        </span>
-                        Einstellungen
-                    </a>
-                </li>
-                <li>
-                    <a href="index.html">
-                        <span class="icon">
-                            <i class="fas fa-power-off"></i>
-                        </span>
-                        Abmelden
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <main>
-            <h1>Übersicht</h1>
-            <article>
-                <h2>Letzter INR-Wert</h2>
-                <p></p>
-                <p>
-                    <span></span>
-                    <span></span>
-                </p>
-            </article>
-            <article>
-                <h2>Daten</h2>
-                <p>Nachname</p>
-                <p></p>
-                <p>Vorname</p>
-                <p></p>
-                <p>Geburtsdatum</p>
-                <p></p>
-                <p>Medikament</p>
-                <p></p>
-                <p>INR-Zielwert</p>
-                <p></p>
-                <p>INR-Zielbereich</p>
-                <p>von 
-                    <span></span> 
-                   bis 
-                   <span></span>
-                </p>
-            </article>
-            <article>
-                <h2>Verlauf</h2>
-            </article>
-        </main>
+        <div class="columns">
+            <nav class="column is-one-quarter menu">
+                <ul class="menu-list is-size-4">
+                    <li>
+                        <a href="overview.html" class="has-text-white has-text-centered">
+                            <span class="icon">
+                                <i class="fas fa-home"></i>
+                            </span>
+                            Übersicht
+                        </a>
+                    </li>
+                    <li>
+                        <a href="myvalues.html" class="has-text-white has-text-centered">
+                            <span class="icon">
+                                <i class="fas fa-notes-medical"></i>
+                            </span>
+                            Meine Werte
+                        </a>
+                    </li>
+                    <li>
+                        <a href="importexport.html" class="has-text-white has-text-centered">
+                            <span class="icon">
+                                <i class="fas fa-file-import"></i>
+                            </span>
+                            Import & Export
+                        </a>
+                    </li>
+                    <li>
+                        <a href="food.html" class="has-text-white has-text-centered">
+                            <span class="icon">
+                                <i class="fas fa-carrot"></i>
+                            </span>
+                            Lebensmittel
+                        </a>
+                    </li>
+                    <li>
+                        <a href="interactions.html" class="has-text-white has-text-centered">
+                            <span class="icon">
+                                <i class="fas fa-pills"></i>
+                            </span>
+                            Wechselwirkungen
+                        </a>
+                    </li>
+                    <li>
+                        <a href="settings.html"class="has-text-white has-text-centered" >
+                            <span class="icon">
+                                <i class="fas fa-cog"></i>
+                            </span>
+                            Einstellungen
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="has-text-white has-text-centered">
+                            <span class="icon">
+                                <i class="fas fa-power-off"></i>
+                            </span>
+                            Abmelden
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <main class="column has-background-white">
+                <h1 class="is-size-2 has-text-primary has-text-centered has-text-weight-bold has-margin-top-30 has-margin-bottom-30">
+                    Übersicht
+                </h1>
+                <div class="columns">
+                    <article class="box column is-half">
+                        <h2 class="is-size-3 has-text-primary has-text-centered has-text-weight-bold has-margin-top-15 has-margin-bottom-15">
+                            Letzter INR-Wert
+                        </h2>
+                        <p></p>
+                        <p>
+                            <span></span>
+                            <span></span>
+                        </p>
+                    </article>
+                    <article class="box column is-half">
+                        <h2 class="is-size-3 has-text-primary has-text-centered has-text-weight-bold has-margin-top-15 has-margin-bottom-15">
+                            Daten
+                        </h2>
+                        <p>Nachname</p>
+                        <p></p>
+                        <p>Vorname</p>
+                        <p></p>
+                        <p>Geburtsdatum</p>
+                        <p></p>
+                        <p>Medikament</p>
+                        <p></p>
+                        <p>INR-Zielwert</p>
+                        <p></p>
+                        <p>INR-Zielbereich</p>
+                        <p>von 
+                            <span></span> 
+                        bis 
+                        <span></span>
+                        </p>
+                    </article>
+                </div>
+                <article class="box">
+                    <h2 class="is-size-3 has-text-primary has-text-centered has-text-weight-bold has-margin-top-15 has-margin-bottom-15">
+                        Verlauf
+                    </h2>
+                </article>
+            </main>
+        </div>
         <footer class="footer is-primary has-text-white">
             <div class="content has-text-centered">
                 <p class="is-size-5">Copyright 2020 Almesberger Marcel</p>

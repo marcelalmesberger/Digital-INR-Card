@@ -9,95 +9,97 @@
         <!--Integration of Fontawesome 5.13.0-->
         <script src="https://kit.fontawesome.com/4956754289.js" crossorigin="anonymous"></script>
     </head>
-    <body>
+    <body class="has-background-primary">
         <header class="hero is-primary is-small">
             <div class="hero-body">
                     <p class="is-size-5">App Name</p>
             </div>
         </header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="overview.html">
-                        <span class="icon">
-                            <i class="fas fa-home"></i>
-                        </span>
-                        Übersicht
-                    </a>
-                </li>
-                <li>
-                    <a href="myvalues.html">
-                        <span class="icon">
-                            <i class="fas fa-notes-medical"></i>
-                        </span>
-                        Meine Werte
-                    </a>
-                </li>
-                <li>
-                    <a href="importexport.html">
-                        <span class="icon">
-                            <i class="fas fa-file-import"></i>
-                        </span>
-                        Import & Export
-                    </a>
-                </li>
-                <li>
-                    <a href="food.html">
-                        <span class="icon">
-                            <i class="fas fa-carrot"></i>
-                        </span>
-                        Lebensmittel
-                    </a>
-                </li>
-                <li>
-                    <a href="interactions.html">
-                        <span class="icon">
-                            <i class="fas fa-pills"></i>
-                        </span>
-                        Wechselwirkungen
-                    </a>
-                </li>
-                <li>
-                    <a href="settings.html">
-                        <span class="icon">
-                            <i class="fas fa-cog"></i>
-                        </span>
-                        Einstellungen
-                    </a>
-                </li>
-                <li>
-                    <a href="index.html">
-                        <span class="icon">
-                            <i class="fas fa-power-off"></i>
-                        </span>
-                        Abmelden
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <main>
-            <h1>Import & Export</h1>
-            <article>
-                <h2>INR-Werte importieren</h2>
-                <p>Sie können gespeicherte INR-Werte Ihres Messgerätes direkt in diese Anwendung importieren.</p>
-                <p>Weitere Informationen zum Übertragen der INR-Werte liefert Ihnen die Bedienungsanleitung Ihres Messgerätes.</p>
-                <form method="POST" action="" enctype="multipart/form-data" id="upload">
-                    <label for="fileupload">Wählen Sie eine Datei zum Importieren aus (akzeptieres Dateiformat: .csv)</label>
-                    <input type="file" id="fileupload" name="fileupload" accept=".csv">
-                    <button type="submit" value="Importieren" class="button is-link">Importieren</button>
-                </form>
-            </article>
-            <article>
-                <h2>INR-Werte exportieren</h2>
-                <p>Ein PDF-Bericht Ihrer gespeicherten INR-Werte kann heruntergeladen werden.</p>
-                <p>Für das Öffnen dieser Datei ist ein Programm zum Anzeigen von PDF-Dokumenten notwendig! (z. B.: Adobe Acrobat Reader)</p>
-                <p>
-                    <a download="" class="button is-link">
-                        <i class="fas fa-file-pdf"></i>PDF Herunterladen
-                    </a>
-                </p>
-            </article>
-        </main>
+        <div class="columns">
+            <nav class="column is-one-quarter menu">
+                <ul class="menu-list is-size-4">
+                    <li>
+                        <a href="overview.html" class="has-text-white has-text-centered">
+                            <span class="icon">
+                                <i class="fas fa-home"></i>
+                            </span>
+                            Übersicht
+                        </a>
+                    </li>
+                    <li>
+                        <a href="myvalues.html" class="has-text-white has-text-centered">
+                            <span class="icon">
+                                <i class="fas fa-notes-medical"></i>
+                            </span>
+                            Meine Werte
+                        </a>
+                    </li>
+                    <li>
+                        <a href="importexport.html" class="has-text-white has-text-centered">
+                            <span class="icon">
+                                <i class="fas fa-file-import"></i>
+                            </span>
+                            Import & Export
+                        </a>
+                    </li>
+                    <li>
+                        <a href="food.html" class="has-text-white has-text-centered">
+                            <span class="icon">
+                                <i class="fas fa-carrot"></i>
+                            </span>
+                            Lebensmittel
+                        </a>
+                    </li>
+                    <li>
+                        <a href="interactions.html" class="has-text-white has-text-centered">
+                            <span class="icon">
+                                <i class="fas fa-pills"></i>
+                            </span>
+                            Wechselwirkungen
+                        </a>
+                    </li>
+                    <li>
+                        <a href="settings.html" class="has-text-white has-text-centered">
+                            <span class="icon">
+                                <i class="fas fa-cog"></i>
+                            </span>
+                            Einstellungen
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="has-text-white has-text-centered">
+                            <span class="icon">
+                                <i class="fas fa-power-off"></i>
+                            </span>
+                            Abmelden
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <main class="column has-background-white"">
+                <h1>Import & Export</h1>
+                <article>
+                    <h2>INR-Werte importieren</h2>
+                    <p>Sie können gespeicherte INR-Werte Ihres Messgerätes direkt in diese Anwendung importieren.</p>
+                    <p>Weitere Informationen zum Übertragen der INR-Werte liefert Ihnen die Bedienungsanleitung Ihres Messgerätes.</p>
+                    <form method="POST" action="" enctype="multipart/form-data" id="upload">
+                        <label for="fileupload">Wählen Sie eine Datei zum Importieren aus (akzeptieres Dateiformat: .csv)</label>
+                        <input type="file" id="fileupload" name="fileupload" accept=".csv">
+                        <button type="submit" value="Importieren" class="button is-link">Importieren</button>
+                    </form>
+                </article>
+                <article>
+                    <h2>INR-Werte exportieren</h2>
+                    <p>Ein PDF-Bericht Ihrer gespeicherten INR-Werte kann heruntergeladen werden.</p>
+                    <p>Für das Öffnen dieser Datei ist ein Programm zum Anzeigen von PDF-Dokumenten notwendig! (z. B.: Adobe Acrobat Reader)</p>
+                    <p>
+                        <a download="" class="button is-link">
+                            <i class="fas fa-file-pdf"></i>PDF Herunterladen
+                        </a>
+                    </p>
+                </article>
+            </main>
+        </div>
         <footer class="footer is-primary has-text-white">
             <div class="content has-text-centered">
                 <p class="is-size-5">Copyright 2020 Almesberger Marcel</p>
