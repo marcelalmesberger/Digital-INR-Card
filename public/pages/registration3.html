@@ -16,61 +16,67 @@
             </div>
         </header>
         <main>
-            <h1>Registrierung</h1>
-            <ul class="steps is-horizontal is-hollow">
-                <li class="steps-segment">
-                    <span class="steps-marker">
-                        <span class="icon">
-                            <i class="fas fa-check"></i>
-                        </span>
-                    </span>
-                </li>
-                <li class="steps-segment">
-                    <span class="steps-marker">
-                        <span class="icon">
-                            <i class="fas fa-check"></i>
-                        </span>
-                    </span>
-                </li>
-                <li class="steps-segment">
-                    <span class="steps-marker">
-                        3
-                    </span>
-                </li>
-            </ul>
-            <form method="POST" action="/public/pages/registration3.html/submit" id="regform3">
-                <div class="field">
-                    <label for="medication" class="label">Medikament*</label>
-                    <div class="control">
-                        <div class="select">
-                            <select id="medication" name="medication" required>
-                                <option value="Acenocoumarol">Acenocoumarol</option>
-                                <option value="Phenprocoumon">Phenprocoumon</option>
-                            </select>
+            <h1 class="is-size-2 has-text-primary has-text-centered has-text-weight-bold has-margin-top-30 has-margin-bottom-30">
+                Registrierung
+            </h1>
+            <div class="columns">
+                <div class="column is-one-third is-offset-one-third">
+                    <ul class="steps is-horizontal is-large has-margin-top-30 has-margin-bottom-30">
+                        <li class="steps-segment">
+                            <span class="steps-marker">
+                                <span class="icon">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                            </span>
+                        </li>
+                        <li class="steps-segment">
+                            <span class="steps-marker">
+                                <span class="icon">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                            </span>
+                        </li>
+                        <li class="steps-segment">
+                            <span class="steps-marker">
+                                3
+                            </span>
+                        </li>
+                    </ul>
+                    <form method="POST" action="/public/pages/registration3.html/submit" id="regform3">
+                        <div class="field">
+                            <label for="medication" class="label">Medikament*</label>
+                            <div class="control">
+                                <div class="select">
+                                    <select id="medication" name="medication" required>
+                                        <option value="Acenocoumarol">Acenocoumarol</option>
+                                        <option value="Phenprocoumon">Phenprocoumon</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <p class="help is-primary">* erforderlich</p>
                         </div>
-                    </div>
-                    <p class="help is-primary">* erforderlich</p>
+                        <div class="field">
+                            <label for="targetvalue" class="label">INR-Zielwert*</label>
+                            <input type="number" id="targetvalue" name="targetvalue" required>
+                        </div>
+                        <p>INR-Zielbereich:</p>
+                        <p>
+                            <label for="minrange">von</label>
+                            <input type="number" id="minrange" name="minrange" required>
+                            <label for="maxrange">bis</label> 
+                            <input type="number" id="maxrange" name="maxrange" required>
+                        </p>
+                    </form>
+                    <p>
+                        <span>
+                            <a href="registration2.html" class="button is-link is-outlined">Zurück</a>
+                        </span>
+                        <span>
+                            <button type="submit" form="regform3" value="weiter" class="button is-link">Weiter</button>
+                        </span>
+                    </p>
                 </div>
-                <div class="field">
-                    <label for="targetvalue" class="label">INR-Zielwert*</label>
-                    <input type="number" id="targetvalue" name="targetvalue" required>
-                </div>
-                <p>INR-Zielbereich:</p>
-                <p>
-                    <label for="minrange">von</label>
-                    <input type="number" id="minrange" name="minrange" required>
-                    <label for="maxrange">bis</label> 
-                    <input type="number" id="maxrange" name="maxrange" required>
-                </p>
-            </form>
-            <p>
-                <span>
-                    <a href="registration2.html" class="button is-link is-outlined">Zurück</a>
-                </span>
-                <span>
-                    <button type="submit" form="regform3" value="weiter" class="button is-link">Weiter</button>
-                </span>
-            </p>
+            </div>
         </main>
         <footer class="footer is-primary has-text-white">
             <div class="content has-text-centered">
