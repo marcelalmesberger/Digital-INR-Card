@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Registrierung Schritt 3</title>
         <!--Integration of stylesheet with Bulma-->
-        <link rel="stylesheet" href="/styles/css/style.css">
+        <link rel="stylesheet" href="../styles/css/style.css">
         <!--Integration of Fontawesome 5.13.0-->
         <script src="https://kit.fontawesome.com/4956754289.js" crossorigin="anonymous"></script>
     </head>
@@ -42,39 +42,50 @@
                             </span>
                         </li>
                     </ul>
-                    <form method="POST" action="/public/pages/registration3.html/submit" id="regform3">
+                    <form method="POST" action="/public/pages/registration3.html/submit" id="regform3" class=box>
                         <div class="field">
-                            <label for="medication" class="label">Medikament*</label>
+                            <label for="medication" class="label has-text-primary is-size-5">Medikament*</label>
                             <div class="control">
-                                <div class="select">
-                                    <select id="medication" name="medication" required>
+                                <div class="select is-medium is-fullwidth">
+                                    <select id="medication" name="medication" class="input is-medium" required>
                                         <option value="Acenocoumarol">Acenocoumarol</option>
                                         <option value="Phenprocoumon">Phenprocoumon</option>
                                     </select>
                                 </div>
                             </div>
-                            <p class="help is-primary">* erforderlich</p>
+                            <p class="help has-text-primary is-size-6">* erforderlich</p>
                         </div>
                         <div class="field">
-                            <label for="targetvalue" class="label">INR-Zielwert*</label>
-                            <input type="number" id="targetvalue" name="targetvalue" required>
+                            <label for="targetvalue" class="label has-text-primary is-size-5 ">INR-Zielwert*</label>
+                            <div class="control">
+                                <input type="number" id="targetvalue" name="targetvalue" class="input is-medium"
+                                placeholder="0.00" min="0.00" max="9.99" step="0.10" required>
+                            </div>
+                            <p class="help has-text-primary is-size-6">* erforderlich</p>
                         </div>
-                        <p>INR-Zielbereich:</p>
-                        <p>
-                            <label for="minrange">von</label>
-                            <input type="number" id="minrange" name="minrange" required>
-                            <label for="maxrange">bis</label> 
-                            <input type="number" id="maxrange" name="maxrange" required>
-                        </p>
+                        <p class="label has-text-primary is-size-5">INR-Zielbereich*</p>
+                        <div class="field">
+                            <label for="minrange" class="label has-text-primary is-size-6">von</label>
+                            <div class="control">
+                                <input type="number" id="minrange" name="minrange" class="input is-medium"
+                                placeholder="0.00" min="0.00" max="9.99" step="0.10" required>
+                            </div>
+                            <label for="maxrange" class="label has-text-primary is-size-6">bis</label>
+                            <div class="control">
+                                <input type="number" id="maxrange" name="maxrange" class="input is-medium"
+                                placeholder="0.00" min="0.00" max="9.99" step="0.10" required>
+                            </div>
+                            <p class="help has-text-primary is-size-6">* erforderlich</p>
+                        </div>
                     </form>
-                    <p>
-                        <span>
-                            <a href="registration2.html" class="button is-link is-outlined">Zurück</a>
-                        </span>
-                        <span>
-                            <button type="submit" form="regform3" value="weiter" class="button is-link">Weiter</button>
-                        </span>
-                    </p>
+                    <div class="level is-mobile has-margin-bottom-45">
+                        <div class="level-left">
+                            <a href="registration2.html" class="button is-link is-outlined is-medium">Zurück</a>
+                        </div>
+                        <div class="level-right">
+                            <button type="submit" form="regform3" value="weiter" class="button is-link is-medium">Weiter</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
