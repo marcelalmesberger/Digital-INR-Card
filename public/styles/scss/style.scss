@@ -6,6 +6,7 @@
 // COLOUR PALETTE
 $my-blue-dark: #03051C;
 $my-blue-light: #3460EF;
+$my-white: #FFFFFF;
 
 // UPDATE BULMA'S GLOBAL VARIABLES
 
@@ -21,7 +22,15 @@ $family-sans-serif: "Roboto", sans-serif;
 // Footer
 $footer-background-color: $primary;
 
-// Steps counter
+// Menu component
+$menu-item-color: $my-white;
+$menu-item-hover-color: $my-white;
+$menu-item-hover-background-color: $link;
+$menu-item-active-color: $primary;
+$menu-item-active-background-color: $my-white;
+
+
+// Steps component
 $steps-default-color: $primary;
 $steps-completed-color: $primary;
 $steps-active-color: $primary;
