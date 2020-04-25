@@ -7,7 +7,9 @@
 $my-blue-dark: #03051C;
 $my-blue-light: #3460EF;
 $my-red: #EA0000;
+$my-green: #008A00;
 $my-white: #FFFFFF;
+$my-orange: #D84000;
 
 // UPDATE BULMA'S GLOBAL VARIABLES
 
@@ -15,6 +17,8 @@ $my-white: #FFFFFF;
 $primary: $my-blue-dark;
 $link: $my-blue-light;
 $danger: $my-red;
+$success: $my-green;
+$warning: $my-orange;
 
 // Typography
 $family-sans-serif: "Roboto", sans-serif;
