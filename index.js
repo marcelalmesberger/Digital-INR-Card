@@ -93,11 +93,18 @@ app.post("/public/pages/registration2.html/submit", (req, res) => {
     res.redirect("/public/pages/registration3.html");
 });
 
+// registration third step
 app.post("/public/pages/registration3.html/submit", (req, res) => {
     console.log("Medikament: " + req.body.medication);
     console.log("INR-Zielwert " + req.body.targetvalue);
     console.log("INR-Zielbereich: von " + req.body.minrange + " bis " + req.body.maxrange);
     res.redirect("/public/pages/overview.html");
+});
+
+// CSV-file upload
+app.post("/public/pages/importexport.html/submit", (req, res) => {
+    console.log("POST-Request für Dateiupload");
+    res.redirect("/public/pages/importexport.html");
 });
 
 // Server listening on port 3000, http://localhost:3000/
