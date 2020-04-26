@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Übersicht</title>
         <!--Integration of stylesheet with Bulma-->
-        <link rel="stylesheet" href="/styles/css/style.css">
+        <link rel="stylesheet" href="../styles/css/style.css">
         <!--Integration of Fontawesome 5.13.0-->
         <script src="https://kit.fontawesome.com/4956754289.js" crossorigin="anonymous"></script>
          <!--Addionational meta tags for SEO-->
@@ -87,42 +87,99 @@
                             Übersicht
                         </h1>
                         <div class="columns">
-                            <article class="column is-one-third">
-                                <h2 class="title is-3 has-text-centered has-margin-top-15 has-margin-bottom-15">
-                                    Letzter INR-Wert
-                                </h2>
-                                <p></p>
-                                <p>
-                                    <span></span>
-                                    <span></span>
-                                </p>
-                            </article>
-                            <article class="column">
-                                <h2 class="title is-3 has-text-centered has-margin-top-15 has-margin-bottom-15">
-                                    Daten
-                                </h2>
-                                <p>Nachname</p>
-                                <p></p>
-                                <p>Vorname</p>
-                                <p></p>
-                                <p>Geburtsdatum</p>
-                                <p></p>
-                                <p>Medikament</p>
-                                <p></p>
-                                <p>INR-Zielwert</p>
-                                <p></p>
-                                <p>INR-Zielbereich</p>
-                                <p>von 
-                                    <span></span> 
-                                bis 
-                                <span></span>
-                                </p>
-                            </article>
+                            <div class="column">
+                                <article class="box has-text-primary">
+                                    <h2 class="title is-3 has-text-centered has-margin-top-15 has-margin-bottom-15">
+                                        Letzter INR-Wert
+                                    </h2>
+                                    <p class="has-text-centered is-size-3 has-margin-top-30 has-margin-bottom-30">
+                                        <span class="icon has-text-danger">
+                                            <i class="fas fa-angle-double-down"></i>
+                                        </span>
+                                        <span class="has-text-weight-bold">
+                                            0.00
+                                        </span>
+                                    </p>
+                                    <p class="level is-size-5">
+                                        <span class="level-left">
+                                            dd.mm.yyyy
+                                        </span>
+                                        <span class="level-right">
+                                            hh:mm
+                                        </span>
+                                    </p>
+                                </article>
+                            </div>
+                            <div class="column">
+                                <article class="box has-text-primary is-size-5">
+                                    <h2 class="title is-3 has-text-centered has-margin-top-15 has-margin-bottom-15">
+                                        Daten
+                                    </h2>
+                                    <div class="columns">
+                                        <div class="column">
+                                            <p class="has-text-weight-bold">
+                                                Nachname
+                                            </p>
+                                            <p>
+                                                Placeholder
+                                            </p>
+                                            <p class="has-text-weight-bold">
+                                                Vorname
+                                            </p>
+                                            <p>
+                                                Placeholder
+                                            </p>
+                                            <p class="has-text-weight-bold">
+                                                Geburtsdatum
+                                            </p>
+                                            <p>
+                                                dd.mm.yyyy
+                                            </p>
+                                        </div>
+                                        <div class="column has-text-right">
+                                            <p class="has-text-weight-bold">
+                                                Medikament
+                                            </p>
+                                            <p>
+                                                Placeholder
+                                            </p>
+                                            <p class="has-text-weight-bold">
+                                                INR-Zielwert
+                                            </p>
+                                            <p>
+                                                0.00
+                                            </p>
+                                            <p class="has-text-weight-bold">
+                                                INR-Zielbereich
+                                            </p>
+                                            <p>
+                                                <span>
+                                                    von
+                                                </span>
+                                                <span>
+                                                    0.00
+                                                </span> 
+                                                <span>
+                                                    bis
+                                                </span> 
+                                                <span>
+                                                    0.00
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
                         </div>
-                        <article class="">
+                        <article class="box" aria-hidden="true">
                             <h2 class="title is-3 has-text-centered has-margin-top-15 has-margin-bottom-15">
                                 Verlauf
                             </h2>
+                            <div>
+                                <p class="has-margin-top-90 has-margin-bottom-90 has-text-centered">
+                                    Placeholder for Diagram
+                                </p>
+                            </div>
                         </article>
                     </div>
                 </div>
