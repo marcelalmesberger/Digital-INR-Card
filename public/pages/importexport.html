@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Import & Export</title>
         <!--Integration of stylesheet with Bulma-->
-        <link rel="stylesheet" href="/styles/css/style.css">
+        <link rel="stylesheet" href="../styles/css/style.css">
         <!--Integration of Fontawesome 5.13.0-->
         <script src="https://kit.fontawesome.com/4956754289.js" crossorigin="anonymous"></script>
          <!--Addionational meta tags for SEO-->
@@ -83,70 +83,72 @@
             <main class="column has-background-white">
                 <div class="columns">
                     <div class="column is-10 is-offset-1">
-                        <h1 class="title is-2 has-text-centered has-margin-top-30 has-margin-bottom-30">
+                        <h1 class="title is-2 has-text-centered has-margin-top-40 has-margin-bottom-40">
                             Import & Export
                         </h1>
-                        <div class="columns">
-                            <article class="column has-text-primary is-size-5">
-                                <h2 class="title is-3 has-text-centered has-margin-top-15 has-margin-bottom-15">
-                                    INR-Werte importieren
-                                </h2>
-                                <p>
-                                    Sie können gespeicherte INR-Werte Ihres Messgerätes direkt in diese Anwendung importieren.
-                                </p>
-                                <p>
-                                    Weitere Informationen zum Übertragen der INR-Werte liefert Ihnen die Bedienungsanleitung
-                                    Ihres Messgerätes.
-                                </p>
-                                <form method="POST" action="/public/pages/importexport.html/submit" 
-                                      enctype="multipart/form-data" id="upload">
-                                      <div class="field">
-                                        <div class="file has-name is-link is-boxed is-fullwidth">
-                                            <label class="file-label">
-                                                <input type="file" id="fileupload" name="fileupload"
-                                                       accept=".csv" class="file-input" required>
-                                                <span class="file-cta">
-                                                    <span class="icon">
-                                                        <i class="fas fa-upload"></i>
-                                                    </span>
-                                                    <span class="file-label has-text-centered">
-                                                        CSV-Datei auswählen
-                                                    </span>
+                        <article class="box has-text-primary is-size-5">
+                            <h2 class="title is-3 has-text-centered has-margin-top-30 has-margin-bottom-30">
+                                INR-Werte importieren
+                            </h2>
+                            <p>
+                                Sie können gespeicherte INR-Werte Ihres Messgerätes direkt in diese Anwendung importieren.
+                            </p>
+                            <p>
+                                Weitere Informationen zum Übertragen der INR-Werte liefert Ihnen die Bedienungsanleitung
+                                Ihres Messgerätes.
+                            </p>
+                            <form method="POST" action="/public/pages/importexport.html/submit" 
+                                    enctype="multipart/form-data" id="upload">
+                                <div class="field has-margin-bottom-30 has-margin-top-30">
+                                    <div class="file has-name is-link is-fullwidth">
+                                        <label class="file-label">
+                                            <input type="file" id="fileupload" name="fileupload"
+                                                    accept=".csv" class="file-input" required>
+                                            <span class="file-cta is-size-5">
+                                                <span class="file-label">
+                                                    CSV-Datei auswählen
                                                 </span>
-                                                <span class="file-name">
-                                                    Keine Datei ausgewählt
-                                                </span>
-                                            </label>
-                                        </div>
+                                            </span>
+                                            <span class="file-name is-size-5">
+                                                Keine Datei ausgewählt
+                                            </span>
+                                        </label>
                                     </div>
-                                </form>
-                                <button type="submit" form="upload" value="Importieren" class="button is-link">
-                                    Importieren
-                                </button>
-                            </article>
-                            <article class="column has-text-primary is-size-5">
-                                <h2 class="title is-3 has-text-centered has-margin-top-15 has-margin-bottom-15">
-                                    INR-Werte exportieren
-                                </h2>
-                                <p>
-                                    Ein PDF-Bericht Ihrer gespeicherten INR-Werte kann heruntergeladen werden.
-                                </p>
-                                <p>
-                                    Für das Öffnen dieser Datei ist ein Programm zum Anzeigen von PDF-Dokumenten notwendig! 
-                                    (z. B.: Adobe Acrobat Reader)
-                                </p>
-                                <div buttons>
-                                    <a download="" class="button is-link">
-                                        <span class="icon">
-                                            <i class="fas fa-file-pdf"></i>
-                                        </span>
-                                        <span>
-                                            PDF Herunterladen
-                                        </span>
-                                    </a>
                                 </div>
-                            </article>
-                        </div>
+                            </form>
+                            <div class="buttons is-right has-margin-bottom-30">
+                                <button type="submit" form="upload" value="Importieren" class="button is-link is-medium">
+                                    <span class="icon">
+                                        <i class="fas fa-upload"></i>
+                                    </span>
+                                    <span>
+                                        Importieren
+                                    </span>
+                                </button>
+                            </div>
+                        </article>
+                        <article class="box has-text-primary is-size-5">
+                            <h2 class="title is-3 has-text-centered has-margin-top-30 has-margin-bottom-30">
+                                INR-Werte exportieren
+                            </h2>
+                            <p>
+                                Ein PDF-Bericht Ihrer gespeicherten INR-Werte kann heruntergeladen werden.
+                            </p>
+                            <p>
+                                Für das Öffnen dieser Datei ist ein Programm zum Anzeigen von PDF-Dokumenten notwendig! 
+                                (z. B.: Adobe Acrobat Reader)
+                            </p>
+                            <div class="buttons is-right has-margin-top-30 has-margin-bottom-30">
+                                <a download="" class="button is-link is-medium">
+                                    <span class="icon">
+                                        <i class="fas fa-file-pdf"></i>
+                                    </span>
+                                    <span>
+                                        PDF Herunterladen
+                                    </span>
+                                </a>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </main>
