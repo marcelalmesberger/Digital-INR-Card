@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="de" dir="ltr">
     <head>
+        <!--Important Head Information-->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Registrierung Schritt 2</title>
@@ -14,17 +15,23 @@
         <meta name="keywords" content="INR, Selbstmanagement">
     </head>
     <body>
+        <!--Start Header-->
         <header class="hero is-primary is-small">
             <div class="hero-body">
-                    <p class="is-size-5">App Name</p>
+                    <p class="is-size-5">
+                        App Name
+                    </p>
             </div>
         </header>
+        <!--End Header-->
+        <!--Start Main Content-->
         <main>
             <h1 class="title is-2 has-text-centered has-margin-top-40 has-margin-bottom-40">
                 Registrierung
             </h1>
             <div class="columns">
                 <div class="column is-one-third is-offset-one-third">
+                    <!--Start Steps Wizard-->
                     <ul class="steps is-horizontal is-large has-margin-top-30 has-margin-bottom-30" aria-hidden="true">
                         <li class="steps-segment">
                             <span class="steps-marker">
@@ -44,45 +51,80 @@
                             </span>
                         </li>
                     </ul>
+                    <!--End Steps Wizard-->
+                    <!--Start Personal Data Form-->
                     <form method="POST" action="/public/pages/registration2.html/submit" id="regform2" class="box">
+                        <!--Start Surname Field-->
                         <div class="field">
-                            <label for="surname" class="label has-text-primary is-size-5">Nachname*</label>
+                            <label for="surname" class="label has-text-primary is-size-5">
+                                Nachname*
+                            </label>
                             <div class="control">
-                                <input type="text" id="surname" name="surname" placeholder="Nachname" class="input is-medium" required>
+                                <input type="text" id="surname" name="surname" 
+                                placeholder="Nachname" class="input is-medium" required>
                             </div>
-                            <p class="help has-text-primary is-size-6">* erforderlich</p>
+                            <p class="help has-text-primary is-size-6">
+                                * erforderlich
+                            </p>
                         </div>
+                        <!--End Surname Field-->
+                        <!--Start Prename Field-->
                         <div class="field">
-                            <label for="prename" class="label has-text-primary is-size-5">Vorname*</label>
+                            <label for="prename" class="label has-text-primary is-size-5">
+                                Vorname*
+                            </label>
                             <div class="control">
-                                <input type="text" id="prename" name="prename" placeholder="Vorname" class="input is-medium" required>
+                                <input type="text" id="prename" name="prename" 
+                                placeholder="Vorname" class="input is-medium" required>
                             </div>
-                            <p class="help has-text-primary is-size-6">* erforderlich</p>
+                            <p class="help has-text-primary is-size-6">
+                                * erforderlich
+                            </p>
                         </div>
+                        <!--End Prename Field-->
+                        <!--Start Birthdate Field-->
                         <div class="field">
-                            <label for="birthdate" class="label has-text-primary is-size-5">Geburtsdatum*</label>
+                            <label for="birthdate" class="label has-text-primary is-size-5">
+                                Geburtsdatum*
+                            </label>
                             <div class="control">
                                 <input type="date" id="birthdate" name="birthdate" class="input is-medium" required>
                             </div>
-                            <p class="help has-text-primary is-size-6">* erforderlich</p>
+                            <p class="help has-text-primary is-size-6">
+                                * erforderlich
+                            </p>
                         </div>
+                        <!--End Birthdate Field-->
                     </form>
+                    <!--End Personal Data Form-->
+                    <!--Start Buttons-->
                     <div class="level is-mobile has-margin-bottom-45">
                         <div class="level-left">
-                            <a href="registration1.html" class="button is-link is-outlined is-medium">Zurück</a>
+                            <a href="registration1.html" class="button is-link is-outlined is-medium">
+                                Zurück
+                            </a>
                         </div>
                         <div class="level-right">
-                            <button type="submit" form="regform2" value="weiter" class="button is-link is-medium">Weiter</button>
+                            <button type="submit" form="regform2" value="weiter" class="button is-link is-medium">
+                                Weiter
+                            </button>
                         </div>
                     </div>
+                    <!--End Buttons-->
                 </div>
             </div>
         </main>
+        <!--End Main Content-->
+        <!--Start Footer-->
         <footer class="footer is-primary has-text-white">
             <div class="has-text-centered">
-                <p class="is-size-5">Copyright 2020 Almesberger Marcel</p>
+                <p class="is-size-5">
+                    Copyright 2020 Almesberger Marcel
+                </p>
             </div>
         </footer>
+        <!--End Footer-->
+        <!--Scripts-->
         <script src="/scripts/script.js"></script>
     </body>
 </html>
