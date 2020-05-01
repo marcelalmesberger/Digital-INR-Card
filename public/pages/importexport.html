@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="de" dir="ltr">
     <head>
+        <!--Important Head Information-->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Import & Export</title>
@@ -14,12 +15,17 @@
         <meta name="keywords" content="INR, Selbstmanagement">
     </head>
     <body class="has-background-primary">
+        <!--Start Header-->
         <header class="hero is-primary is-small">
             <div class="hero-body">
-                    <p class="is-size-5">App Name</p>
+                    <p class="is-size-5">
+                        App Name
+                    </p>
             </div>
         </header>
+        <!--End Header-->
         <div class="columns">
+            <!--Start Main Navigation-->
             <nav class="column is-one-quarter menu">
                 <ul class="menu-list is-size-4">
                     <li>
@@ -80,12 +86,15 @@
                     </li>
                 </ul>
             </nav>
+            <!--End Main Navigation-->
+            <!--Start Main Content-->
             <main class="column has-background-white">
                 <div class="columns">
                     <div class="column is-10 is-offset-1">
                         <h1 class="title is-2 has-text-centered has-margin-top-40 has-margin-bottom-40">
                             Import & Export
                         </h1>
+                        <!--Start Import Content-->
                         <article class="box has-text-primary is-size-5">
                             <h2 class="title is-3 has-text-centered has-margin-top-30 has-margin-bottom-30">
                                 INR-Werte importieren
@@ -97,6 +106,7 @@
                                 Weitere Informationen zum Übertragen der INR-Werte liefert Ihnen die Bedienungsanleitung
                                 Ihres Messgerätes.
                             </p>
+                            <!--Start CSV File Upload Form-->
                             <form method="POST" action="/public/pages/importexport.html/submit" 
                                     enctype="multipart/form-data" id="upload">
                                 <div class="field has-margin-bottom-30 has-margin-top-30">
@@ -116,6 +126,8 @@
                                     </div>
                                 </div>
                             </form>
+                            <!--End CSV File Upload Form-->
+                            <!--Start Upload Button-->
                             <div class="buttons is-right has-margin-bottom-30">
                                 <button type="submit" form="upload" value="Importieren" class="button is-link is-medium">
                                     <span class="icon">
@@ -126,7 +138,10 @@
                                     </span>
                                 </button>
                             </div>
+                            <!--End Upload Button-->
                         </article>
+                        <!--End Import Content-->
+                        <!--Start Export Content-->
                         <article class="box has-text-primary is-size-5">
                             <h2 class="title is-3 has-text-centered has-margin-top-30 has-margin-bottom-30">
                                 INR-Werte exportieren
@@ -138,6 +153,7 @@
                                 Für das Öffnen dieser Datei ist ein Programm zum Anzeigen von PDF-Dokumenten notwendig! 
                                 (z. B.: Adobe Acrobat Reader)
                             </p>
+                            <!--Start Download Button-->
                             <div class="buttons is-right has-margin-top-30 has-margin-bottom-30">
                                 <a href="" download class="button is-link is-medium">
                                     <span class="icon">
@@ -148,16 +164,24 @@
                                     </span>
                                 </a>
                             </div>
+                            <!--End Download Button-->
                         </article>
+                        <!--End Export Content-->
                     </div>
                 </div>
             </main>
+            <!--End Main Content-->
         </div>
+        <!--Start Footer-->
         <footer class="footer is-primary has-text-white">
             <div class="has-text-centered">
-                <p class="is-size-5">Copyright 2020 Almesberger Marcel</p>
+                <p class="is-size-5">
+                    Copyright 2020 Almesberger Marcel
+                </p>
             </div>
         </footer>
+        <!--End Footer-->
+        <!--Scripts-->
         <script src="/scripts/script.js"></script>
     </body>
 </html>
