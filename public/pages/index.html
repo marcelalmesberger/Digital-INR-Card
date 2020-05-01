@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="de" dir="ltr">
     <head>
+        <!--Important Head Information-->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Startseite</title>
@@ -14,59 +15,79 @@
         <meta name="keywords" content="INR, Selbstmanagement">
     </head>
     <body>
+        <!--Start Site Header-->
         <header class="hero is-primary is-small">
             <div class="hero-body">
                     <p class="is-size-5">App Name</p>
             </div>
         </header>
+        <!--End Site Header-->
+        <!--Start Main Content-->
         <main>
             <h1 class="title is-2 has-text-centered has-margin-top-40 has-margin-bottom-40">
                 App Name
             </h1>
             <div class="columns">
                 <div class="column is-one-third is-offset-one-third">
+                    <!--Start Login Form-->
                     <form method="POST" action="/submit" id="loginform" class="box">
+                        <!--Start Email Field-->
                         <div class="field">
                             <label for="loginmail" class="label has-text-primary is-size-5">Email*</label>
                             <div class="control has-icons-left">
-                                <input type="email" id="loginmail" name="loginmail" placeholder="Email" class="input is-medium" required>
+                                <input type="email" id="loginmail" name="loginmail"
+                                placeholder="Email" class="input is-medium" required>
                                 <span class="icon is-left">
                                     <i class="fas fa-envelope"></i>
                                 </span>
                             </div>
                             <p class="help has-text-primary is-size-6">* erforderlich</p>
                         </div>
+                        <!--End Email Field-->
+                        <!--Start Password Field-->
                         <div class="field">
                             <label for="loginpwd" class="label has-text-primary is-size-5">Passwort*</label>
                             <div class="control has-icons-left">
-                                <input type="password" id="loginpwd" name="loginpwd" placeholder="Passwort" class="input is-medium" required>
+                                <input type="password" id="loginpwd" name="loginpwd"
+                                placeholder="Passwort" class="input is-medium" required>
                                 <span class="icon is-left">
                                     <i class="fas fa-lock"></i>
                                 </span>
                             </div>
                             <p class="help has-text-primary is-size-6">* erforderlich</p>
                         </div>
+                        <!--End Password Field-->
                     </form>
+                    <!--End Login Form-->
+                    <!--Start Login Button-->
                     <div class="buttons">
                         <button type="submit" form="loginform" value="anmelden"
                         class="button is-link is-medium is-fullwidth" style="justify-content: center;">
                             <span>Anmelden</span>
                         </button>
                     </div>
+                    <!--End Login Button-->
+                    <!--Start Register Button-->
                     <div class="buttons">
                         <a href="/public/pages/registration1.html" 
-                        class="button is-link is-medium is-outlined is-fullwidth has-margin-bottom-45" style="justify-content: center;">
+                        class="button is-link is-medium is-outlined is-fullwidth has-margin-bottom-45" 
+                        style="justify-content: center;">
                             <span>Registrieren</span>
                         </a>
                     </div>
+                    <!--End Register Button-->
                 </div>
             </div>
         </main>
+        <!--End Main Content-->
+        <!--Start Footer-->
         <footer class="footer is-primary has-text-white">
             <div class="has-text-centered">
                 <p class="is-size-5">Copyright 2020 Almesberger Marcel</p>
             </div>
         </footer>
+        <!--End Footer-->
+        <!--Scripts-->
         <script src="/scripts/script.js"></script>
     </body>
 </html>
