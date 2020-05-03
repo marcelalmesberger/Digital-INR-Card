@@ -37,7 +37,15 @@ document.addEventListener("DOMContentLoaded", () => {
             }]
         },
         options: {
-
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        max: 5,
+                        min: 0,
+                        steps: 0.5
+                    }
+                }]
+            }
         }
     });
 
