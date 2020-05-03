@@ -1,6 +1,3 @@
-//load required modules
-const Chart = require("chart.js")
-
 // check if DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
     console.log("DOM has been loaded and ready!");
@@ -8,7 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // GENERATE LINE GRAPH FOR OVERVIEW PAGE
 
     // Graph data
-    let graphData;
+    let graphLabels = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+    let graphData = [2.54, 2.63, 2.46, 2.56, 2.61];
 
     // Select <canvas> element
     let ctx = document.getElementById("myChart");
@@ -16,9 +14,16 @@ document.addEventListener("DOMContentLoaded", () => {
     //create line graph
     let lineChart = new Chart(ctx, {
         type: "line",
-        data: graphData
+        data: {
+            labels: graphLabels,
+            datasets: [{
+                label: "INR",
+                data: graphData
+            }]
+        },
+        options: {
 
-
+        }
     });
 
 
