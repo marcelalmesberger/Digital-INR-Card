@@ -1,6 +1,7 @@
 // load required modules
 const express = require("express");
 const bodyParser = require("body-parser");
+const fs = require("fs");
 
 // create express instance
 const app = express();
@@ -70,7 +71,7 @@ app.get("/public/pages/index.html", (req, res) => {
 
 /* POST-REQUESTS */
 
-// landing page
+// landing page (at the moment no login checks are executed!)
 app.post("/submit", (req, res) => {
     console.log("Email: " + req.body.loginmail);
     console.log("Passwort: " + req.body.loginpwd);
@@ -79,25 +80,80 @@ app.post("/submit", (req, res) => {
 
 // registration first step
 app.post("/public/pages/registration1.html/submit", (req, res) => {
+    // load settings.json
+    let rawSettings = fs.readFileSync("settings.json");
+    // parse settings.json
+    let settings = JSON.parse(rawSettings);
+    console.log(settings);
+    // save Email in variable and update settings.json
     console.log("Email: " + req.body.regemail);
+    let email = req.body.regemail;
+    settings.email = email;
+    // save Password in variable and update settings.json
     console.log("Passwort: " + req.body.regpwd);
+    let pwd = req.body.regpwd;
+    settings.password = pwd;
+    // save Check-Password in variable and update settings.json
     console.log("Bestätigung Passwort: " + req.body.checkpwd);
+    let checkpwd = req.body.checkpwd;
+    // save updated settings object in JSON
+    console.log(settings);
+    fs.writeFileSync("settings.json", JSON.stringify(settings));
+    // redirect to the next site
     res.redirect("/public/pages/registration2.html");
 });
 
 // registration second step
 app.post("/public/pages/registration2.html/submit", (req, res) => {
+    // load settings.json
+    let rawSettings = fs.readFileSync("settings.json");
+    // parse settings.json
+    let settings = JSON.parse(rawSettings);
+    console.log(settings);
+    // save Surname in varibale and update settings.json
     console.log("Nachname: " + req.body.surname);
+    let surname = req.body.surname;
+    settings.surname = surname;
+    // save Prename in variable and update settings.json
     console.log("Vorname: " + req.body.prename);
+    let prename = req.body.prename;
+    settings.prename = prename;
+    // save Birthdate in variable and update settings.json
     console.log("Geburtsdatum: " + req.body.birthdate);
+    let birthdate = req.body.birthdate;
+    settings.birthdate = birthdate
+    // save updated settings object in JSON
+    console.log(settings);
+    fs.writeFileSync("settings.json", JSON.stringify(settings));
+    // redirect to the next site
     res.redirect("/public/pages/registration3.html");
 });
 
 // registration third step
 app.post("/public/pages/registration3.html/submit", (req, res) => {
+    // load settings.json
+    let rawSettings = fs.readFileSync("settings.json");
+    // parse settings.json
+    let settings = JSON.parse(rawSettings);
+    console.log(settings);
+    // save Medication in variable an update settings.json
     console.log("Medikament: " + req.body.medication);
+    let medication = req.body.medication;
+    settings.medication = medication;
+    // save INR Target Value in variable and update settings.json
     console.log("INR-Zielwert " + req.body.targetvalue);
+    let targetValue = req.body.targetvalue;
+    settings.targetValue = targetValue;
+    // save INR Target Range in variables and update settings.json
     console.log("INR-Zielbereich: von " + req.body.minrange + " bis " + req.body.maxrange);
+    let minRange = req.body.minrange;
+    let maxRange = req.body.maxrange;
+    settings.minRange = minRange;
+    settings.maxRange = maxRange;
+    // save updated settings object in JSON
+    console.log(settings);
+    fs.writeFileSync("settings.json", JSON.stringify(settings));
+    // redirect to the next site
     res.redirect("/public/pages/overview.html");
 });
 
