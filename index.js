@@ -81,7 +81,7 @@ app.post("/submit", (req, res) => {
 // registration first step
 app.post("/public/pages/registration1.html/submit", (req, res) => {
     // load settings.json
-    let rawSettings = fs.readFileSync("settings.json");
+    let rawSettings = fs.readFileSync("public/data/settings.json");
     // parse settings.json
     let settings = JSON.parse(rawSettings);
     console.log(settings);
@@ -98,7 +98,7 @@ app.post("/public/pages/registration1.html/submit", (req, res) => {
     let checkpwd = req.body.checkpwd;
     // save updated settings object in JSON
     console.log(settings);
-    fs.writeFileSync("settings.json", JSON.stringify(settings));
+    fs.writeFileSync("public/data/settings.json", JSON.stringify(settings));
     // redirect to the next site
     res.redirect("/public/pages/registration2.html");
 });
@@ -106,7 +106,7 @@ app.post("/public/pages/registration1.html/submit", (req, res) => {
 // registration second step
 app.post("/public/pages/registration2.html/submit", (req, res) => {
     // load settings.json
-    let rawSettings = fs.readFileSync("settings.json");
+    let rawSettings = fs.readFileSync("public/data/settings.json");
     // parse settings.json
     let settings = JSON.parse(rawSettings);
     console.log(settings);
@@ -124,7 +124,7 @@ app.post("/public/pages/registration2.html/submit", (req, res) => {
     settings.birthdate = birthdate
     // save updated settings object in JSON
     console.log(settings);
-    fs.writeFileSync("settings.json", JSON.stringify(settings));
+    fs.writeFileSync("public/data/settings.json", JSON.stringify(settings));
     // redirect to the next site
     res.redirect("/public/pages/registration3.html");
 });
@@ -132,7 +132,7 @@ app.post("/public/pages/registration2.html/submit", (req, res) => {
 // registration third step
 app.post("/public/pages/registration3.html/submit", (req, res) => {
     // load settings.json
-    let rawSettings = fs.readFileSync("settings.json");
+    let rawSettings = fs.readFileSync("public/data/settings.json");
     // parse settings.json
     let settings = JSON.parse(rawSettings);
     console.log(settings);
@@ -152,7 +152,7 @@ app.post("/public/pages/registration3.html/submit", (req, res) => {
     settings.maxRange = maxRange;
     // save updated settings object in JSON
     console.log(settings);
-    fs.writeFileSync("settings.json", JSON.stringify(settings));
+    fs.writeFileSync("public/data/settings.json", JSON.stringify(settings));
     // redirect to the next site
     res.redirect("/public/pages/overview.html");
 });

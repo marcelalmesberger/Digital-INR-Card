@@ -2,11 +2,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     console.log("DOM has been loaded and ready!");
 
-
-    
-
-
-
     // GENERATE LINE GRAPH FOR OVERVIEW PAGE
 
     // Graph data
@@ -54,6 +49,18 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-
+    // CHANGE THE SHOWN FILE UPLOAD PATH ON THE IMPORT & EXPORT PAGE
     
+    // Select file upload input field
+    /*const fileInput = document.querySelector("#fileUpload input[type=file]")
+    console.log(fileInput);
+
+    // change file path name if file is uploaded
+    fileInput.onchange = () => {
+        if (fileInput.files.length > 0) {
+            const fileName = document.querySelector("#fileUpload .file-name");
+            console.log(fileName);
+            fileName.textContent = fileInput.files[0].name;
+        }
+    }*/
 });
