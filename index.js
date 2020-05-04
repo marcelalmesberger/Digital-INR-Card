@@ -93,7 +93,7 @@ app.post("/public/pages/registration1.html/submit", (req, res) => {
     console.log("Passwort: " + req.body.regpwd);
     let pwd = req.body.regpwd;
     settings.password = pwd;
-    // save Check-Password in variable and update settings.json
+    // save Check-Password in variable (not used yet in this prototype!)
     console.log("Bestätigung Passwort: " + req.body.checkpwd);
     let checkpwd = req.body.checkpwd;
     // save updated settings object in JSON

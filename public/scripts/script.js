@@ -2,6 +2,11 @@
 document.addEventListener("DOMContentLoaded", () => {
     console.log("DOM has been loaded and ready!");
 
+
+    
+
+
+
     // GENERATE LINE GRAPH FOR OVERVIEW PAGE
 
     // Graph data
