@@ -2,6 +2,26 @@
 document.addEventListener("DOMContentLoaded", () => {
     console.log("DOM has been loaded and ready!");
 
+    // fetch settings.json and change page content
+    fetch("http://localhost:3000/data/settings.json")
+    .then((res) => res.json())
+    .then((settings) => {
+        console.log(settings);
+        // change the respective HTML elements with the fetched content
+        document.getElementById("pSurname").innerHTML = settings.surname;
+        document.getElementById("pPrename").innerHTML = settings.prename;
+        document.getElementById("pBirthdate").innerHTML = settings.birthdate;
+        document.getElementById("pMedication").innerHTML = settings.medication;
+        document.getElementById("pTargetValue").innerHTML = settings.targetValue;
+        document.getElementById("pMinRange").innerHTML = settings.minRange;
+        document.getElementById("pMaxRange").innerHTML = settings.maxRange;
+    
+    })
+    .catch((err) => {
+        console.log(err);
+    });
+
+
     // GENERATE LINE GRAPH FOR OVERVIEW PAGE
 
     // Graph data
@@ -48,19 +68,4 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     });
-
-    // CHANGE THE SHOWN FILE UPLOAD PATH ON THE IMPORT & EXPORT PAGE
-    
-    // Select file upload input field
-    /*const fileInput = document.querySelector("#fileUpload input[type=file]")
-    console.log(fileInput);
-
-    // change file path name if file is uploaded
-    fileInput.onchange = () => {
-        if (fileInput.files.length > 0) {
-            const fileName = document.querySelector("#fileUpload .file-name");
-            console.log(fileName);
-            fileName.textContent = fileInput.files[0].name;
-        }
-    }*/
 });
