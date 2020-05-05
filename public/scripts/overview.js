@@ -21,7 +21,13 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(err);
     });
 
+    // fetch storage.json and change page content
+    fetch("http://localhost:3000/data/storage.json")
+    .then((res) => res.json())
+    .then((storage) => {
+        console.log(storage);
 
+    });
     // GENERATE LINE GRAPH FOR OVERVIEW PAGE
 
     // Graph data
