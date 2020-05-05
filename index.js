@@ -2,6 +2,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const fs = require("fs");
+const multer = require("multer");
+const csv = require("fast-csv");
 
 // create express instance
 const app = express();
@@ -11,6 +13,9 @@ app.use(express.static(__dirname +"/public"));
 
 // use modules
 app.use(bodyParser.urlencoded({ extended: true }));
+
+// define temporary directory for file uploads
+const upload = multer({ dest: "public/data/" });
 
 /* ROUTES GET-REQUESTS*/
 
@@ -158,8 +163,24 @@ app.post("/public/pages/registration3.html/submit", (req, res) => {
 });
 
 // CSV-file upload
-app.post("/public/pages/importexport.html/submit", (req, res) => {
+app.post("/public/pages/importexport.html/submit", upload.single("fileupload"), (req, res) => {
     console.log("POST-Request für Dateiupload");
+    const fileRows = [];
+
+    // open uploaded file
+    csv.parseFile(req.file.path)
+        .on("data", (data) => {
+            fileRows.push(data);
+        })
+        .on("end", () => {
+            console.log(fileRows);
+            // save data stream in variable
+            let stream = fs.readFileSync(req.file.path);
+            // write stream in storage.csv
+            fs.writeFileSync("public/data/storage.csv", stream);
+            // delete stream file
+            fs.unlinkSync(req.file.path);
+        })
     res.redirect("/public/pages/importexport.html");
 });
 
