@@ -7,6 +7,5 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((res) => res.json())
     .then((storage) => {
         console.log(storage);
-
     });
 })
