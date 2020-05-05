@@ -26,52 +26,58 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((res) => res.json())
     .then((storage) => {
         console.log(storage);
+        // change the respective HTML elements with the fetched content
+        document.getElementById("latestINR").innerHTML = storage[storage.length - 1].inr;
+        document.getElementById("latestDate").innerHTML = storage[storage.length - 1].date;
+        document.getElementById("latestTime").innerHTML = storage[storage.length - 1].time;
 
-    });
-    // GENERATE LINE GRAPH FOR OVERVIEW PAGE
+        // generate line graph based on fetched data
+        
+        // graph data with the 5 latest data entries
+        let graphLabels = [storage[storage.length - 5].date, storage[storage.length - 4].date, storage[storage.length - 3].date, 
+        storage[storage.length - 2].date, storage[storage.length - 1].date];
+        let graphData = [storage[storage.length - 5].inr, storage[storage.length - 4].inr, storage[storage.length - 3].inr, 
+        storage[storage.length - 2].inr, storage[storage.length - 1].inr];
 
-    // Graph data
-    let graphLabels = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
-    let graphData = [2.54, 2.63, 2.46, 2.56, 2.61];
+        // Select <canvas> element
+        let ctx = document.getElementById("myChart");
 
-    // Select <canvas> element
-    let ctx = document.getElementById("myChart");
+        // Update global variables of Chart.js
+        Chart.defaults.global.defaultFontColor = "#03051C";
+        Chart.defaults.global.defaultFontSize = 20;
+        Chart.defaults.global.defaultFontFamily = "'Roboto', 'sans-serif'";
 
-    // Update global variables of Chart.js
-    Chart.defaults.global.defaultFontColor = "#03051C";
-    Chart.defaults.global.defaultFontSize = 20;
-    Chart.defaults.global.defaultFontFamily = "'Roboto', 'sans-serif'";
-
-    //create line graph
-    let lineChart = new Chart(ctx, {
-        type: "line",
-        data: {
-            labels: graphLabels,
-            datasets: [{
-                label: "INR",
-                // line colours
-                backgroundColor: "#3460EF",
-                borderColor: "#3460EF",
-                // filling area under the line
-                fill: false,
-                // point colours
-                pointBackgroundColor: "#03051C",
-                pointBorderColor: "#03051C",
-                // point size
-                pointRadius: 4,
-                data: graphData
-            }]
-        },
-        options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        max: 5,
-                        min: 0,
-                        steps: 0.5
-                    }
+        //create line graph
+        let lineChart = new Chart(ctx, {
+            type: "line",
+            data: {
+                labels: graphLabels,
+                datasets: [{
+                    label: "INR",
+                    // line colours
+                    backgroundColor: "#3460EF",
+                    borderColor: "#3460EF",
+                    // filling area under the line
+                    fill: false,
+                    // point colours
+                    pointBackgroundColor: "#03051C",
+                    pointBorderColor: "#03051C",
+                    // point size
+                    pointRadius: 4,
+                    data: graphData
                 }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            max: 5,
+                            min: 0,
+                            steps: 0.5
+                        }
+                    }]
+                }
             }
-        }
-    });
+        });
+    });  
 });
