@@ -161,7 +161,7 @@ app.post("/public/pages/registration3.html/submit", (req, res) => {
 });
 // CSV-file upload
 
-// define temporary directory for file uploads
+// define directory for file uploads
 const upload = multer({ dest: "public/data/" });
 
 // POST-request for file-upload
