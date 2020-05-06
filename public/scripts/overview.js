@@ -2,34 +2,58 @@
 document.addEventListener("DOMContentLoaded", () => {
     console.log("DOM has been loaded and ready!");
 
-    // fetch settings.json and change page content
-    fetch("http://localhost:3000/data/settings.json")
-    .then((res) => res.json())
-    .then((settings) => {
-        console.log(settings);
-        // change the respective HTML elements with the fetched content
-        document.getElementById("pSurname").innerHTML = settings.surname;
-        document.getElementById("pPrename").innerHTML = settings.prename;
-        document.getElementById("pBirthdate").innerHTML = settings.birthdate;
-        document.getElementById("pMedication").innerHTML = settings.medication;
-        document.getElementById("pTargetValue").innerHTML = settings.targetValue;
-        document.getElementById("pMinRange").innerHTML = settings.minRange;
-        document.getElementById("pMaxRange").innerHTML = settings.maxRange;
     
-    })
-    .catch((err) => {
-        console.log(err);
-    });
-
     // fetch storage.json and change page content
     fetch("http://localhost:3000/data/storage.json")
     .then((res) => res.json())
     .then((storage) => {
         console.log(storage);
-        // change the respective HTML elements with the fetched content
+        // change the respective HTML elements with the fetched content of storage.json
         document.getElementById("latestINR").innerHTML = storage[storage.length - 1].inr;
         document.getElementById("latestDate").innerHTML = storage[storage.length - 1].date;
         document.getElementById("latestTime").innerHTML = storage[storage.length - 1].time;
+
+        // fetch settings.json
+        fetch("http://localhost:3000/data/settings.json")
+        .then((res) => res.json())
+        .then((settings) => {
+            console.log(settings);
+            // change the respective HTML elements with the fetched content of settings.json
+            document.getElementById("pSurname").innerHTML = settings.surname;
+            document.getElementById("pPrename").innerHTML = settings.prename;
+            document.getElementById("pBirthdate").innerHTML = settings.birthdate;
+            document.getElementById("pMedication").innerHTML = settings.medication;
+            document.getElementById("pTargetValue").innerHTML = settings.targetValue;
+            document.getElementById("pMinRange").innerHTML = settings.minRange;
+            document.getElementById("pMaxRange").innerHTML = settings.maxRange;
+            
+            // change icon according to INR range
+            
+            // select the respective elements
+            let iconContainer = document.getElementById("iconContainer");
+            let iconContent = document.getElementById("iconContent");
+
+            // save INR range in variables
+            let minRange = settings.minRange;
+            let maxRange = settings.maxRange;
+
+            // save displayed INR value in variable
+            let inrValue = storage[storage.length - 1].inr;
+
+            // change icon
+            if (inrValue < maxRange && inrValue > minRange) {
+                iconContainer.className = "icon has-text-success";
+                iconContent.className = "fas fa-check";
+            }
+            if (inrValue < minRange) {
+                iconContainer.className = "icon has-text-danger";
+                iconContent.className = "fas fa-angle-double-down";
+            }
+            if (inrValue > maxRange) {
+                iconContainer.className = "icon has-text-danger";
+                iconContent.className = "fas fa-angle-double-up";
+            }
+        });
 
         // generate line graph based on fetched data
         
