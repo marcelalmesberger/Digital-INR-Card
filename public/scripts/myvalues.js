@@ -38,7 +38,7 @@ let htmlString = `<!--Start Data Entry-->
         </div>
     </div>
     <div class="level-item">
-        <a href="" class="button is-link is-outlined is-medium">
+        <a href="" disabled class="button is-link is-outlined is-medium">
             <span class="icon">
                 <i class="fas fa-edit"></i>
             </span>
@@ -48,7 +48,7 @@ let htmlString = `<!--Start Data Entry-->
         </a>
     </div>
     <div class="level-item">
-        <a href="" class="button is-link is-outlined is-medium">
+        <a href="" disabled class="button is-link is-outlined is-medium">
             <span class="icon">
                 <i class="fas fa-trash-alt"></i>
             </span>
