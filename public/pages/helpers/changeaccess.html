@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+    <head>
+        <!--Important Head Information-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Änderung Zugangsdaten</title>
+        <!--Integration of stylesheet with Bulma-->
+        <link rel="stylesheet" href="/styles/css/style.css">
+        <!--Integration of Fontawesome 5.13.0-->
+        <script src="https://kit.fontawesome.com/4956754289.js" crossorigin="anonymous"></script>
+        <!--Addionational meta tags for SEO-->
+        <meta name="author" content="Almesberger Marcel">
+        <meta name="description" content="Änderung Zugangsdaten">
+        <meta name="keywords" content="INR, Selbstmanagement">
+    </head>
+    <body>
+        <!--Start Header-->
+        <header class="hero is-primary is-small">
+            <div class="hero-body">
+                    <p class="is-size-5">
+                        App Name
+                    </p>
+            </div>
+        </header>
+        <!--End Header-->
+        <!--Start Main Content-->
+        <main>
+            <h1 class="title is-2 has-text-centered has-margin-top-40 has-margin-bottom-40">
+                Zugangsdaten ändern
+            </h1>
+            <div class="columns">
+                <div class="column is-one-third is-offset-one-third">
+                    <!--Start Change Access Data Form-->
+                    <form method="POST" action="/public/pages/helpers/changeaccess.html/submit" id="changeform1" class="box">
+                        <!--Start Email Field-->
+                        <div class="field">
+                            <label for="regemail" class="label has-text-primary is-size-5">
+                                Email*
+                            </label>
+                            <div class="control has-icons-left">
+                                <input type="email" id="regemail" name="regemail"
+                                placeholder="Email" class="input is-medium" required>
+                                <span class="icon is-left">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                            </div>
+                            <p class="help has-text-primary is-size-6">
+                                * erforderlich
+                            </p>
+                        </div>
+                        <!--End Email Field-->
+                        <!--Start Password Field-->
+                        <div class="field">
+                            <label for="regpwd" class="label has-text-primary is-size-5">
+                                Passwort*
+                            </label>
+                            <div class="control has-icons-left">
+                                <input type="password" id="regpwd" name="regpwd"
+                                placeholder="Passwort" class="input is-medium" required>
+                                <span class="icon is-left">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                            </div>
+                            <p class="help has-text-primary is-size-6">
+                                * erforderlich
+                            </p>
+                        </div>
+                        <!--End Password Field-->
+                        <!--Start Password Check Field-->
+                        <div class="field">
+                            <label for="checkpwd" class="label has-text-primary is-size-5">
+                                Bestätigung Passwort*
+                            </label>
+                            <div class="control has-icons-left">
+                                <input type="password" id="checkpwd" name="checkpwd"
+                                placeholder="Bestätigung Passwort" class="input is-medium" required>
+                                <span class="icon is-left">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                            </div>
+                            <p class="help has-text-primary is-size-6">
+                                * erforderlich
+                            </p>
+                        </div>
+                        <!--End Change Access Data Form Field-->
+                    </form>
+                    <!--End Registration Data Form-->
+                    <!--Start Buttons-->
+                    <div class="level is-mobile has-margin-bottom-45">
+                        <div class="level-left">
+                            <a href="../settings.html" class="button is-link is-outlined is-medium">
+                                Zurück
+                            </a>
+                        </div>
+                        <div class="level-right">
+                            <button type="submit" form="changeform1" value="weiter" class="button is-link is-medium">
+                                Ändern
+                            </button>
+                        </div>
+                    </div>
+                    <!--End Buttons-->
+                </div>
+            </div>
+        </main>
+        <!--End Main Content-->
+        <!--Start Footer-->
+        <footer class="footer is-primary has-text-white">
+            <div class="has-text-centered">
+                <p class="is-size-5">
+                    Copyright 2020 Almesberger Marcel
+                </p>
+            </div>
+        </footer>
+        <!--End Footer-->
+        <!--Scripts-->
+    </body>
+</html>
