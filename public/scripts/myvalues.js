@@ -28,9 +28,6 @@ let htmlString = `<!--Start Data Entry-->
                 INR
             </p>
             <p>
-                <span class="icon has-text-danger">
-                    <i class="fas fa-angle-double-down"></i>
-                </span>
                 <span class="entryINR">
                     0.00
                 </span>
