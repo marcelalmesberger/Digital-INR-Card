@@ -1,3 +1,5 @@
+/* LOAD AND USE MODULES */
+
 // load required modules
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -87,12 +89,12 @@ app.get("/public/pages/helpers/changemedication.html", (req, res) => {
     res.sendFile(__dirname + "/public/pages/helpers/changemedication.html");
 });
 
-/* POST-REQUESTS */
+/* POST-REQUESTS REGISTRATION */
 
 // landing page (at the moment no login checks are executed!)
 app.post("/submit", (req, res) => {
     console.log("Email: " + req.body.loginmail);
-    console.log("Passwort: " + req.body.loginpwd);
+    console.log("Password: " + req.body.loginpwd);
     res.redirect("/public/pages/overview.html");
 });
 
@@ -108,11 +110,11 @@ app.post("/public/pages/registration1.html/submit", (req, res) => {
     let email = req.body.regemail;
     settings.email = email;
     // save Password in variable and update settings.json
-    console.log("Passwort: " + req.body.regpwd);
+    console.log("Password: " + req.body.regpwd);
     let pwd = req.body.regpwd;
     settings.password = pwd;
     // save Check-Password in variable (not used yet in this prototype!)
-    console.log("Bestätigung Passwort: " + req.body.checkpwd);
+    console.log("Password check: " + req.body.checkpwd);
     let checkpwd = req.body.checkpwd;
     // save updated settings object in JSON
     console.log(settings);
@@ -129,15 +131,15 @@ app.post("/public/pages/registration2.html/submit", (req, res) => {
     let settings = JSON.parse(rawSettings);
     console.log(settings);
     // save Surname in varibale and update settings.json
-    console.log("Nachname: " + req.body.surname);
+    console.log("Surname: " + req.body.surname);
     let surname = req.body.surname;
     settings.surname = surname;
     // save Prename in variable and update settings.json
-    console.log("Vorname: " + req.body.prename);
+    console.log("Prename: " + req.body.prename);
     let prename = req.body.prename;
     settings.prename = prename;
-    // save Birthdate in variable and update settings.json
-    console.log("Geburtsdatum: " + req.body.birthdate);
+    // save Birth date in variable and update settings.json
+    console.log("Birth date: " + req.body.birthdate);
     let birthdate = req.body.birthdate;
     settings.birthdate = birthdate
     // save updated settings object in JSON
@@ -155,15 +157,15 @@ app.post("/public/pages/registration3.html/submit", (req, res) => {
     let settings = JSON.parse(rawSettings);
     console.log(settings);
     // save Medication in variable an update settings.json
-    console.log("Medikament: " + req.body.medication);
+    console.log("Medication: " + req.body.medication);
     let medication = req.body.medication;
     settings.medication = medication;
     // save INR Target Value in variable and update settings.json
-    console.log("INR-Zielwert " + req.body.targetvalue);
+    console.log("INR target value: " + req.body.targetvalue);
     let targetValue = req.body.targetvalue;
     settings.targetValue = targetValue;
     // save INR Target Range in variables and update settings.json
-    console.log("INR-Zielbereich: von " + req.body.minrange + " bis " + req.body.maxrange);
+    console.log("INR target range: from " + req.body.minrange + " to " + req.body.maxrange);
     let minRange = req.body.minrange;
     let maxRange = req.body.maxrange;
     settings.minRange = minRange;
@@ -174,16 +176,17 @@ app.post("/public/pages/registration3.html/submit", (req, res) => {
     // redirect to the next site
     res.redirect("/public/pages/overview.html");
 });
-// CSV-file upload
+
+/* POST-REQUESTS CSV FILE UPLOAD */
 
 // define directory for file uploads
 const upload = multer({ dest: "public/data/" });
 
 // POST-request for file-upload
 app.post("/public/pages/importexport.html/submit", upload.single("fileupload"), (req, res) => {
-    console.log("POST-Request für Dateiupload");
-    const fileRows = [];
+    console.log("POST-request for file upload");
 
+    const fileRows = [];
     // open uploaded file
     csv.parseFile(req.file.path)
         .on("data", (data) => {
@@ -204,8 +207,11 @@ app.post("/public/pages/importexport.html/submit", upload.single("fileupload"), 
                 fs.writeFileSync("public/data/storage.json", JSON.stringify(jsonObj));
             });
         })
+    // redirect to Import & Export page
     res.redirect("/public/pages/importexport.html");
 });
+
+/* POST-REQUESTS SETTINGS CHANGE */
 
 // change access data
 app.post("/public/pages/helpers/changeaccess.html/submit", (req, res) => {
@@ -219,16 +225,16 @@ app.post("/public/pages/helpers/changeaccess.html/submit", (req, res) => {
     let email = req.body.regemail;
     settings.email = email;
     // save Password in variable and update settings.json
-    console.log("Passwort: " + req.body.regpwd);
+    console.log("Password: " + req.body.regpwd);
     let pwd = req.body.regpwd;
     settings.password = pwd;
     // save Check-Password in variable (not used yet in this prototype!)
-    console.log("Bestätigung Passwort: " + req.body.checkpwd);
+    console.log("Password check: " + req.body.checkpwd);
     let checkpwd = req.body.checkpwd;
     // save updated settings object in JSON
     console.log(settings);
     fs.writeFileSync("public/data/settings.json", JSON.stringify(settings));
-    // redirect to settings site
+    // redirect to Settings page
     res.redirect("/public/pages/settings.html");
 });
 
@@ -240,21 +246,21 @@ app.post("/public/pages/helpers/changepersonal.html/submit", (req, res) => {
     let settings = JSON.parse(rawSettings);
     console.log(settings);
     // save Surname in varibale and update settings.json
-    console.log("Nachname: " + req.body.surname);
+    console.log("Surname: " + req.body.surname);
     let surname = req.body.surname;
     settings.surname = surname;
     // save Prename in variable and update settings.json
-    console.log("Vorname: " + req.body.prename);
+    console.log("Prename: " + req.body.prename);
     let prename = req.body.prename;
     settings.prename = prename;
-    // save Birthdate in variable and update settings.json
-    console.log("Geburtsdatum: " + req.body.birthdate);
+    // save Birth date in variable and update settings.json
+    console.log("Birth date: " + req.body.birthdate);
     let birthdate = req.body.birthdate;
     settings.birthdate = birthdate
     // save updated settings object in JSON
     console.log(settings);
     fs.writeFileSync("public/data/settings.json", JSON.stringify(settings));
-    // redirect to settings site
+    // redirect to Settings page
     res.redirect("/public/pages/settings.html");
 });
 
@@ -266,15 +272,15 @@ app.post("/public/pages/helpers/changemedication.html/submit", (req, res) => {
     let settings = JSON.parse(rawSettings);
     console.log(settings);
     // save Medication in variable an update settings.json
-    console.log("Medikament: " + req.body.medication);
+    console.log("Medication: " + req.body.medication);
     let medication = req.body.medication;
     settings.medication = medication;
     // save INR Target Value in variable and update settings.json
-    console.log("INR-Zielwert " + req.body.targetvalue);
+    console.log("INR target value " + req.body.targetvalue);
     let targetValue = req.body.targetvalue;
     settings.targetValue = targetValue;
     // save INR Target Range in variables and update settings.json
-    console.log("INR-Zielbereich: von " + req.body.minrange + " bis " + req.body.maxrange);
+    console.log("INR target range: from " + req.body.minrange + " to " + req.body.maxrange);
     let minRange = req.body.minrange;
     let maxRange = req.body.maxrange;
     settings.minRange = minRange;
@@ -282,9 +288,11 @@ app.post("/public/pages/helpers/changemedication.html/submit", (req, res) => {
     // save updated settings object in JSON
     console.log(settings);
     fs.writeFileSync("public/data/settings.json", JSON.stringify(settings));
-    // redirect to settings site
+    // redirect to Settings page
     res.redirect("/public/pages/settings.html");
 });
+
+/* SERVER LISTENING */
 
 // Server listening on port 3000, http://localhost:3000/
 app.listen(3000, () => {
