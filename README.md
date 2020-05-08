@@ -5,7 +5,7 @@ Software prototype of a digital INR card for storing and managing blood coagulat
 
 1. Download the [code repository](https://github.com/marcelalmesberger/Masterthesis-INR-Application/archive/master.zip)
 
-2. Change into the downloaded directory
+2. Change into the downloaded directory and open command line
 
 3. Install NPM packages
 `npm install`
