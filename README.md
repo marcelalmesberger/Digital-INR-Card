@@ -10,7 +10,7 @@ Software prototype of a digital INR card for storing and managing blood coagulat
 3. Install NPM packages
 `npm install`
 
-4. Starting the protoype
+4. Start the protoype
 `node index.js`
 
 5. Open browser and navigate to http://localhost:3000/
