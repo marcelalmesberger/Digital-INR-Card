@@ -2,7 +2,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     console.log("DOM has been loaded and ready!");
 
-    
     // fetch storage.json and change page content
     fetch("http://localhost:3000/data/storage.json")
     .then((res) => res.json())
@@ -27,9 +26,9 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("pMinRange").innerHTML = settings.minRange;
             document.getElementById("pMaxRange").innerHTML = settings.maxRange;
             
-            // change icon according to INR range
-            
-            // select the respective elements
+            /* ICON CHANGE*/
+
+            // select the respective icon elements
             let iconContainer = document.getElementById("iconContainer");
             let iconContent = document.getElementById("iconContent");
 
@@ -40,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // save displayed INR value in variable
             let inrValue = storage[storage.length - 1].inr;
 
-            // change icon
+            // change icon according to INR target range
             if (inrValue < maxRange && inrValue > minRange) {
                 iconContainer.className = "icon has-text-success";
                 iconContent.className = "fas fa-check";
@@ -58,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log(error);
         });
 
-        // generate line graph based on fetched data
+        /* LINE GRAPH */
         
         // graph data with the 5 latest data entries
         let graphLabels = [storage[storage.length - 5].date, storage[storage.length - 4].date, storage[storage.length - 3].date, 
@@ -98,6 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 scales: {
                     yAxes: [{
                         ticks: {
+                            // adapt y-axis 
                             max: 5,
                             min: 0,
                             steps: 0.5
