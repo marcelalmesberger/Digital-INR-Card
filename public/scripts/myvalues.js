@@ -104,5 +104,8 @@ document.addEventListener("DOMContentLoaded", () => {
             timeEntry.innerHTML = storage[(storage.length - 1) - i].time;
             inrEntry.innerHTML = storage[(storage.length - 1) - i].inr;
         }
+    })
+    .catch((error) => {
+        console.log(error);
     });
 })

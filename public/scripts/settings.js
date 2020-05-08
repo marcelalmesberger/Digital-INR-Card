@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("pEmail").innerHTML = settings.email;
         document.getElementById("pPassword").innerHTML = settings.password;
     })
-    .catch((err) => {
-        console.log(err);
+    .catch((error) => {
+        console.log(error);
     });
 });

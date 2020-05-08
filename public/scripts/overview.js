@@ -53,6 +53,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 iconContainer.className = "icon has-text-danger";
                 iconContent.className = "fas fa-angle-double-up";
             }
+        })
+        .catch((error) => {
+            console.log(error);
         });
 
         // generate line graph based on fetched data
@@ -103,5 +106,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
         });
-    });  
+    })
+    .catch((error) => {
+        console.log(error);
+    });
 });
