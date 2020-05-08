@@ -1,5 +1,5 @@
 # Masterthesis-INR-Application
-Software prototype of a digital INR card for storing and managing blood coagulation monitoring data
+Software prototype of a digital INR card for storing and managing anticoagulation therapy monitoring data
 
 ## Installation
 
