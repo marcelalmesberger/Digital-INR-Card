@@ -26,6 +26,7 @@ Software prototype of a digital INR card for storing and managing anticoagulatio
 ## Planned features for further versions
 * Manual data import of INR measurement data by the user
 * Manual editing and deleting of stored measurement data by the user
+* Export of stored measurement data as PDF file
 * Implementation of user authentication and security concerns
 
 ## Copyright and licence
