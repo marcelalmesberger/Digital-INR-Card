@@ -16,10 +16,10 @@ Software prototype for managing International Normalized Ratio (INR) measurement
 
 ## Usage
 
-4. Start the prototype with the command
+1. Start the prototype with the command
 `node index.js`
 
-5. Open your browser and navigate to http://localhost:3000/
+2. Open your browser and navigate to http://localhost:3000/
 
 ## Implemented features in Version 1.0
 * Development of all static content
