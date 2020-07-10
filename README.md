@@ -1,19 +1,25 @@
-# Masterthesis-INR-Application
-Software prototype of a digital INR card for storing and managing anticoagulation therapy monitoring data
+# Digital International Normalized Ratio (INR) Card
+Software prototype for managing International Normalized Ratio (INR) measurement data used in monitoring of oral anticoagulation therapy. Furthermore, this application provides useful information for patients under long-term anticoagulation to reduce the time needed for daily anticoagulation monitoring activities.
+
+## Prerequisites
+
+1. Install [Node.js](https://nodejs.org/en/) on your computer
 
 ## Installation
 
-1. Download the [code repository](https://github.com/marcelalmesberger/Masterthesis-INR-Application/archive/master.zip) and unzip the folder
+1. Download the [code repository](https://github.com/marcelalmesberger/Digital-INR-Card/archive/master.zip) and unzip the folder
 
 2. Change into the downloaded directory and open command line
 
-3. Install NPM packages
+3. Install NPM packages with the command
 `npm install`
 
-4. Start the protoype
+## Usage
+
+4. Start the prototype with the command
 `node index.js`
 
-5. Open browser and navigate to http://localhost:3000/
+5. Open your browser and navigate to http://localhost:3000/
 
 ## Implemented features in Version 1.0
 * Development of all static content
@@ -22,6 +28,7 @@ Software prototype of a digital INR card for storing and managing anticoagulatio
 * Visualization of the imported measurement data as data table and line graph
 * Handling form data of the registration process
 * Editing personal settings data
+* Information about possibile interactions with food and other drugs
 
 ## Planned features for further versions
 * Manual data import of INR measurement data by the user
