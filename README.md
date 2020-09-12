@@ -1,6 +1,10 @@
 # Digital International Normalized Ratio (INR) Card
 Software prototype for managing International Normalized Ratio (INR) measurement data used in monitoring of oral anticoagulation therapy. Furthermore, this application provides useful information for patients under long-term anticoagulation to reduce the time needed for daily anticoagulation monitoring activities.
 
+## Used technologies
+
+HTML, CSS, Bulma, Sass, JavaScript, Chart.js, Webfonts & Iconfonts, Node.js, Express.js
+
 ## Prerequisites
 
 1. Install [Node.js](https://nodejs.org/en/) on your computer
