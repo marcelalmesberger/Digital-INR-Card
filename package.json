@@ -30,6 +30,6 @@
     "bulma": "^0.8.1",
     "bulma-o-steps": "^1.0.9",
     "bulma-spacing": "^1.0.2",
-    "node-sass": "^4.13.1"
+    "node-sass": "^7.0.0"
   }
 }
